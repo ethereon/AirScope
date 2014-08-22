@@ -38,6 +38,7 @@ using namespace std;
     VERIFY(_shLineColor = [_shader locationForUniform:"elem_color"]);
     glGenBuffers(1, &_vbo);
     _lineColor = GLKVector4Make(0.96f, 0.6f, 0.0f, 1.0f);
+    _lineWidth = 2.0*[[NSScreen mainScreen] backingScaleFactor];
     [self clearPoints];
     return self;
 }
@@ -72,7 +73,7 @@ using namespace std;
     glBindBuffer(GL_ARRAY_BUFFER, _vbo);
     glEnableVertexAttribArray(_shPoints);
     glVertexAttribPointer(_shPoints, 3, GL_FLOAT, GL_FALSE, 0, 0);
-    glLineWidth(4.0);
+    glLineWidth(_lineWidth);
     glDrawArrays(GL_LINE_STRIP, 0, (GLsizei)_points.size());
 }
 

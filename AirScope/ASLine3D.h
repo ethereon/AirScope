@@ -15,5 +15,6 @@
 -(void) appendPoint:(GLKVector3)p;
 
 @property (assign) GLKVector4 lineColor;
+@property (assign) float lineWidth;
 
 @end
