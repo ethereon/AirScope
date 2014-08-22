@@ -1,0 +1,12 @@
+# OS X files
+.DS_Store
+
+# XCode files
+*.xccheckout
+xcuserdata
+
+# Build dirs
+Build/
+
+# External libraries
+Libs/

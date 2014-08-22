@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A87784919A1F99D008EFA5D /* ASBounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A87784819A1F99D008EFA5D /* ASBounds.m */; };
+		8A87784C19A20028008EFA5D /* ASPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A87784B19A20028008EFA5D /* ASPlot.m */; };
+		8A87785B19A742DA008EFA5D /* Plane.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8A87785919A742DA008EFA5D /* Plane.fsh */; };
+		8A87785C19A742DA008EFA5D /* Plane.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 8A87785A19A742DA008EFA5D /* Plane.vsh */; };
+		8A87785F19A74301008EFA5D /* ASPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A87785E19A74301008EFA5D /* ASPlane.m */; };
+		8AA3638B19A08B0B00CFF466 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA3638A19A08B0B00CFF466 /* Cocoa.framework */; };
+		8AA3639519A08B0B00CFF466 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3639319A08B0B00CFF466 /* InfoPlist.strings */; };
+		8AA3639719A08B0B00CFF466 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3639619A08B0B00CFF466 /* main.m */; };
+		8AA3639B19A08B0B00CFF466 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3639919A08B0B00CFF466 /* Credits.rtf */; };
+		8AA3639E19A08B0B00CFF466 /* ASAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3639D19A08B0B00CFF466 /* ASAppDelegate.m */; };
+		8AA363A119A08B0B00CFF466 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3639F19A08B0B00CFF466 /* MainMenu.xib */; };
+		8AA363A319A08B0B00CFF466 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA363A219A08B0B00CFF466 /* Images.xcassets */; };
+		8AA363AA19A08B0B00CFF466 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA363A919A08B0B00CFF466 /* XCTest.framework */; };
+		8AA363AB19A08B0B00CFF466 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA3638A19A08B0B00CFF466 /* Cocoa.framework */; };
+		8AA363B319A08B0B00CFF466 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AA363B119A08B0B00CFF466 /* InfoPlist.strings */; };
+		8AA363B519A08B0B00CFF466 /* AirScopeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA363B419A08B0B00CFF466 /* AirScopeTests.m */; };
+		8AA363C119A08B4E00CFF466 /* ASPlotController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA363BF19A08B4E00CFF466 /* ASPlotController.m */; };
+		8AA363C219A08B4E00CFF466 /* ASPlotWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA363C019A08B4E00CFF466 /* ASPlotWindow.xib */; };
+		8AA363CE19A0900100CFF466 /* Shader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA363CD19A0900100CFF466 /* Shader.m */; };
+		8AA363D119A098E700CFF466 /* ASLine3D.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AA363D019A098E700CFF466 /* ASLine3D.mm */; };
+		8AA363D419A09B8400CFF466 /* BasicElement.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 8AA363D319A09B8400CFF466 /* BasicElement.vsh */; };
+		8AA363D619A09B9C00CFF466 /* BasicElement.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8AA363D519A09B9C00CFF466 /* BasicElement.fsh */; };
+		8AEA8E4319A0A78E0037DE52 /* ASPlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA8E4219A0A78E0037DE52 /* ASPlotView.m */; };
+		8AEA8E4519A0B8470037DE52 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AEA8E4419A0B8470037DE52 /* GLKit.framework */; };
+		8AEA8E5819A1F4680037DE52 /* ASElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA8E5719A1F4680037DE52 /* ASElement.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8AA363AC19A08B0B00CFF466 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AA3637F19A08B0A00CFF466 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AA3638619A08B0B00CFF466;
+			remoteInfo = AirScope;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A87784719A1F99D008EFA5D /* ASBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASBounds.h; sourceTree = "<group>"; };
+		8A87784819A1F99D008EFA5D /* ASBounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASBounds.m; sourceTree = "<group>"; };
+		8A87784A19A20028008EFA5D /* ASPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPlot.h; sourceTree = "<group>"; };
+		8A87784B19A20028008EFA5D /* ASPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPlot.m; sourceTree = "<group>"; };
+		8A87785919A742DA008EFA5D /* Plane.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Plane.fsh; sourceTree = "<group>"; };
+		8A87785A19A742DA008EFA5D /* Plane.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Plane.vsh; sourceTree = "<group>"; };
+		8A87785D19A74301008EFA5D /* ASPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPlane.h; sourceTree = "<group>"; };
+		8A87785E19A74301008EFA5D /* ASPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPlane.m; sourceTree = "<group>"; };
+		8AA3638719A08B0B00CFF466 /* AirScope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirScope.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AA3638A19A08B0B00CFF466 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8AA3638D19A08B0B00CFF466 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8AA3638E19A08B0B00CFF466 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8AA3638F19A08B0B00CFF466 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8AA3639219A08B0B00CFF466 /* AirScope-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AirScope-Info.plist"; sourceTree = "<group>"; };
+		8AA3639419A08B0B00CFF466 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8AA3639619A08B0B00CFF466 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8AA3639819A08B0B00CFF466 /* AirScope-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirScope-Prefix.pch"; sourceTree = "<group>"; };
+		8AA3639A19A08B0B00CFF466 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		8AA3639C19A08B0B00CFF466 /* ASAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASAppDelegate.h; sourceTree = "<group>"; };
+		8AA3639D19A08B0B00CFF466 /* ASAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASAppDelegate.m; sourceTree = "<group>"; };
+		8AA363A019A08B0B00CFF466 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8AA363A219A08B0B00CFF466 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8AA363A819A08B0B00CFF466 /* AirScopeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirScopeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AA363A919A08B0B00CFF466 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8AA363B019A08B0B00CFF466 /* AirScopeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AirScopeTests-Info.plist"; sourceTree = "<group>"; };
+		8AA363B219A08B0B00CFF466 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8AA363B419A08B0B00CFF466 /* AirScopeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirScopeTests.m; sourceTree = "<group>"; };
+		8AA363BE19A08B4E00CFF466 /* ASPlotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPlotController.h; sourceTree = "<group>"; };
+		8AA363BF19A08B4E00CFF466 /* ASPlotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPlotController.m; sourceTree = "<group>"; };
+		8AA363C019A08B4E00CFF466 /* ASPlotWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ASPlotWindow.xib; sourceTree = "<group>"; };
+		8AA363CC19A0900100CFF466 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		8AA363CD19A0900100CFF466 /* Shader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shader.m; sourceTree = "<group>"; };
+		8AA363CF19A098E700CFF466 /* ASLine3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASLine3D.h; sourceTree = "<group>"; };
+		8AA363D019A098E700CFF466 /* ASLine3D.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ASLine3D.mm; sourceTree = "<group>"; };
+		8AA363D319A09B8400CFF466 /* BasicElement.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BasicElement.vsh; sourceTree = "<group>"; };
+		8AA363D519A09B9C00CFF466 /* BasicElement.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BasicElement.fsh; sourceTree = "<group>"; };
+		8AEA8E4119A0A78E0037DE52 /* ASPlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPlotView.h; sourceTree = "<group>"; };
+		8AEA8E4219A0A78E0037DE52 /* ASPlotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPlotView.m; sourceTree = "<group>"; };
+		8AEA8E4419A0B8470037DE52 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		8AEA8E5619A1F4680037DE52 /* ASElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASElement.h; sourceTree = "<group>"; };
+		8AEA8E5719A1F4680037DE52 /* ASElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASElement.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AA3638419A08B0B00CFF466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AEA8E4519A0B8470037DE52 /* GLKit.framework in Frameworks */,
+				8AA3638B19A08B0B00CFF466 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AA363A519A08B0B00CFF466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA363AB19A08B0B00CFF466 /* Cocoa.framework in Frameworks */,
+				8AA363AA19A08B0B00CFF466 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AA3637E19A08B0A00CFF466 = {
+			isa = PBXGroup;
+			children = (
+				8AA3639019A08B0B00CFF466 /* AirScope */,
+				8AA363AE19A08B0B00CFF466 /* AirScopeTests */,
+				8AA3638919A08B0B00CFF466 /* Frameworks */,
+				8AA3638819A08B0B00CFF466 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AA3638819A08B0B00CFF466 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AA3638719A08B0B00CFF466 /* AirScope.app */,
+				8AA363A819A08B0B00CFF466 /* AirScopeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AA3638919A08B0B00CFF466 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AEA8E4419A0B8470037DE52 /* GLKit.framework */,
+				8AA3638A19A08B0B00CFF466 /* Cocoa.framework */,
+				8AA363A919A08B0B00CFF466 /* XCTest.framework */,
+				8AA3638C19A08B0B00CFF466 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8AA3638C19A08B0B00CFF466 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AA3638D19A08B0B00CFF466 /* AppKit.framework */,
+				8AA3638E19A08B0B00CFF466 /* CoreData.framework */,
+				8AA3638F19A08B0B00CFF466 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		8AA3639019A08B0B00CFF466 /* AirScope */ = {
+			isa = PBXGroup;
+			children = (
+				8AA363D219A09B6600CFF466 /* Shaders */,
+				8AA3639C19A08B0B00CFF466 /* ASAppDelegate.h */,
+				8AA3639D19A08B0B00CFF466 /* ASAppDelegate.m */,
+				8AA3639F19A08B0B00CFF466 /* MainMenu.xib */,
+				8AA363A219A08B0B00CFF466 /* Images.xcassets */,
+				8AA3639119A08B0B00CFF466 /* Supporting Files */,
+				8AA363BE19A08B4E00CFF466 /* ASPlotController.h */,
+				8AA363BF19A08B4E00CFF466 /* ASPlotController.m */,
+				8AA363C019A08B4E00CFF466 /* ASPlotWindow.xib */,
+				8AA363CC19A0900100CFF466 /* Shader.h */,
+				8AA363CD19A0900100CFF466 /* Shader.m */,
+				8A87784A19A20028008EFA5D /* ASPlot.h */,
+				8A87784B19A20028008EFA5D /* ASPlot.m */,
+				8AA363CF19A098E700CFF466 /* ASLine3D.h */,
+				8AA363D019A098E700CFF466 /* ASLine3D.mm */,
+				8AEA8E4119A0A78E0037DE52 /* ASPlotView.h */,
+				8AEA8E4219A0A78E0037DE52 /* ASPlotView.m */,
+				8AEA8E5619A1F4680037DE52 /* ASElement.h */,
+				8AEA8E5719A1F4680037DE52 /* ASElement.m */,
+				8A87784719A1F99D008EFA5D /* ASBounds.h */,
+				8A87784819A1F99D008EFA5D /* ASBounds.m */,
+				8A87785D19A74301008EFA5D /* ASPlane.h */,
+				8A87785E19A74301008EFA5D /* ASPlane.m */,
+			);
+			path = AirScope;
+			sourceTree = "<group>";
+		};
+		8AA3639119A08B0B00CFF466 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AA3639219A08B0B00CFF466 /* AirScope-Info.plist */,
+				8AA3639319A08B0B00CFF466 /* InfoPlist.strings */,
+				8AA3639619A08B0B00CFF466 /* main.m */,
+				8AA3639819A08B0B00CFF466 /* AirScope-Prefix.pch */,
+				8AA3639919A08B0B00CFF466 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8AA363AE19A08B0B00CFF466 /* AirScopeTests */ = {
+			isa = PBXGroup;
+			children = (
+				8AA363B419A08B0B00CFF466 /* AirScopeTests.m */,
+				8AA363AF19A08B0B00CFF466 /* Supporting Files */,
+			);
+			path = AirScopeTests;
+			sourceTree = "<group>";
+		};
+		8AA363AF19A08B0B00CFF466 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AA363B019A08B0B00CFF466 /* AirScopeTests-Info.plist */,
+				8AA363B119A08B0B00CFF466 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8AA363D219A09B6600CFF466 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				8A87785919A742DA008EFA5D /* Plane.fsh */,
+				8A87785A19A742DA008EFA5D /* Plane.vsh */,
+				8AA363D319A09B8400CFF466 /* BasicElement.vsh */,
+				8AA363D519A09B9C00CFF466 /* BasicElement.fsh */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AA3638619A08B0B00CFF466 /* AirScope */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AA363B819A08B0B00CFF466 /* Build configuration list for PBXNativeTarget "AirScope" */;
+			buildPhases = (
+				8AA3638319A08B0B00CFF466 /* Sources */,
+				8AA3638419A08B0B00CFF466 /* Frameworks */,
+				8AA3638519A08B0B00CFF466 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirScope;
+			productName = AirScope;
+			productReference = 8AA3638719A08B0B00CFF466 /* AirScope.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8AA363A719A08B0B00CFF466 /* AirScopeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AA363BB19A08B0B00CFF466 /* Build configuration list for PBXNativeTarget "AirScopeTests" */;
+			buildPhases = (
+				8AA363A419A08B0B00CFF466 /* Sources */,
+				8AA363A519A08B0B00CFF466 /* Frameworks */,
+				8AA363A619A08B0B00CFF466 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AA363AD19A08B0B00CFF466 /* PBXTargetDependency */,
+			);
+			name = AirScopeTests;
+			productName = AirScopeTests;
+			productReference = 8AA363A819A08B0B00CFF466 /* AirScopeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AA3637F19A08B0A00CFF466 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Saumitro Dasgupta";
+				TargetAttributes = {
+					8AA363A719A08B0B00CFF466 = {
+						TestTargetID = 8AA3638619A08B0B00CFF466;
+					};
+				};
+			};
+			buildConfigurationList = 8AA3638219A08B0A00CFF466 /* Build configuration list for PBXProject "AirScope" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8AA3637E19A08B0A00CFF466;
+			productRefGroup = 8AA3638819A08B0B00CFF466 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AA3638619A08B0B00CFF466 /* AirScope */,
+				8AA363A719A08B0B00CFF466 /* AirScopeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AA3638519A08B0B00CFF466 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A87785B19A742DA008EFA5D /* Plane.fsh in Resources */,
+				8AA363C219A08B4E00CFF466 /* ASPlotWindow.xib in Resources */,
+				8AA3639519A08B0B00CFF466 /* InfoPlist.strings in Resources */,
+				8A87785C19A742DA008EFA5D /* Plane.vsh in Resources */,
+				8AA363D619A09B9C00CFF466 /* BasicElement.fsh in Resources */,
+				8AA363A319A08B0B00CFF466 /* Images.xcassets in Resources */,
+				8AA3639B19A08B0B00CFF466 /* Credits.rtf in Resources */,
+				8AA363D419A09B8400CFF466 /* BasicElement.vsh in Resources */,
+				8AA363A119A08B0B00CFF466 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AA363A619A08B0B00CFF466 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA363B319A08B0B00CFF466 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AA3638319A08B0B00CFF466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A87784C19A20028008EFA5D /* ASPlot.m in Sources */,
+				8AA3639E19A08B0B00CFF466 /* ASAppDelegate.m in Sources */,
+				8AA3639719A08B0B00CFF466 /* main.m in Sources */,
+				8AEA8E5819A1F4680037DE52 /* ASElement.m in Sources */,
+				8AA363D119A098E700CFF466 /* ASLine3D.mm in Sources */,
+				8A87784919A1F99D008EFA5D /* ASBounds.m in Sources */,
+				8AA363C119A08B4E00CFF466 /* ASPlotController.m in Sources */,
+				8AA363CE19A0900100CFF466 /* Shader.m in Sources */,
+				8A87785F19A74301008EFA5D /* ASPlane.m in Sources */,
+				8AEA8E4319A0A78E0037DE52 /* ASPlotView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AA363A419A08B0B00CFF466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA363B519A08B0B00CFF466 /* AirScopeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8AA363AD19A08B0B00CFF466 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AA3638619A08B0B00CFF466 /* AirScope */;
+			targetProxy = 8AA363AC19A08B0B00CFF466 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8AA3639319A08B0B00CFF466 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AA3639419A08B0B00CFF466 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8AA3639919A08B0B00CFF466 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AA3639A19A08B0B00CFF466 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		8AA3639F19A08B0B00CFF466 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AA363A019A08B0B00CFF466 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		8AA363B119A08B0B00CFF466 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AA363B219A08B0B00CFF466 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8AA363B619A08B0B00CFF466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8AA363B719A08B0B00CFF466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8AA363B919A08B0B00CFF466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirScope/AirScope-Prefix.pch";
+				INFOPLIST_FILE = "AirScope/AirScope-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8AA363BA19A08B0B00CFF466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirScope/AirScope-Prefix.pch";
+				INFOPLIST_FILE = "AirScope/AirScope-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8AA363BC19A08B0B00CFF466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AirScope.app/Contents/MacOS/AirScope";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirScope/AirScope-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AirScopeTests/AirScopeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8AA363BD19A08B0B00CFF466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AirScope.app/Contents/MacOS/AirScope";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirScope/AirScope-Prefix.pch";
+				INFOPLIST_FILE = "AirScopeTests/AirScopeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AA3638219A08B0A00CFF466 /* Build configuration list for PBXProject "AirScope" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AA363B619A08B0B00CFF466 /* Debug */,
+				8AA363B719A08B0B00CFF466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AA363B819A08B0B00CFF466 /* Build configuration list for PBXNativeTarget "AirScope" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AA363B919A08B0B00CFF466 /* Debug */,
+				8AA363BA19A08B0B00CFF466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AA363BB19A08B0B00CFF466 /* Build configuration list for PBXNativeTarget "AirScopeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AA363BC19A08B0B00CFF466 /* Debug */,
+				8AA363BD19A08B0B00CFF466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AA3637F19A08B0A00CFF466 /* Project object */;
+}
