@@ -35,12 +35,6 @@
     }
     [_plot addElement:line];
     [_plotView setNeedsDisplay:YES];
-    [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(updateIt) userInfo:nil repeats:YES];
-}
-
--(void) updateIt
-{
-    [_plotView setNeedsDisplay:YES];
 }
 
 @end
