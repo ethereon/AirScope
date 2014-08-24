@@ -8,8 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class ASMissionControl;
+
 @interface ASAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (strong, readonly) ASMissionControl* missionControl;
 
 @end

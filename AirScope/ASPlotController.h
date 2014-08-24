@@ -11,6 +11,13 @@
 
 @interface ASPlotController : NSWindowController
 
+-(void) setTitle:(NSString*)title;
+-(void) reset;
+-(void) update;
+
+-(void) addPoint:(GLKVector3)p toLineWithKey:(NSString*)lineKey;
+
 @property (strong) IBOutlet ASPlotView* plotView;
+@property (strong) ASPlot* plot;
 
 @end

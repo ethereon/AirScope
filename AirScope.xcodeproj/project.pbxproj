@@ -17,7 +17,6 @@
 		8AA3639719A08B0B00CFF466 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3639619A08B0B00CFF466 /* main.m */; };
 		8AA3639B19A08B0B00CFF466 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3639919A08B0B00CFF466 /* Credits.rtf */; };
 		8AA3639E19A08B0B00CFF466 /* ASAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3639D19A08B0B00CFF466 /* ASAppDelegate.m */; };
-		8AA363A119A08B0B00CFF466 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3639F19A08B0B00CFF466 /* MainMenu.xib */; };
 		8AA363A319A08B0B00CFF466 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA363A219A08B0B00CFF466 /* Images.xcassets */; };
 		8AA363AA19A08B0B00CFF466 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA363A919A08B0B00CFF466 /* XCTest.framework */; };
 		8AA363AB19A08B0B00CFF466 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA3638A19A08B0B00CFF466 /* Cocoa.framework */; };
@@ -29,6 +28,21 @@
 		8AA363D119A098E700CFF466 /* ASLine3D.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AA363D019A098E700CFF466 /* ASLine3D.mm */; };
 		8AA363D419A09B8400CFF466 /* BasicElement.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 8AA363D319A09B8400CFF466 /* BasicElement.vsh */; };
 		8AA363D619A09B9C00CFF466 /* BasicElement.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8AA363D519A09B9C00CFF466 /* BasicElement.fsh */; };
+		8AB2C5CB19A8155300385156 /* ASCommunicator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2C5CA19A8155300385156 /* ASCommunicator.mm */; };
+		8AB2C5CE19A815A200385156 /* ASMissionControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2C5CD19A815A200385156 /* ASMissionControl.m */; };
+		8AC3F4DD19A8A67F00B497F6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA3638A19A08B0B00CFF466 /* Cocoa.framework */; };
+		8AC3F4E319A8A67F00B497F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AC3F4E119A8A67F00B497F6 /* InfoPlist.strings */; };
+		8AC3F50219A8A6BC00B497F6 /* Plotter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8AC3F50019A8A6BC00B497F6 /* Plotter.cpp */; };
+		8AC3F50319A8A6BC00B497F6 /* Plotter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8AC3F50119A8A6BC00B497F6 /* Plotter.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AC3F50719A8A7A400B497F6 /* libzmq.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AD6397119A85BF90044B1A4 /* libzmq.a */; };
+		8AC3F50B19A8A7FE00B497F6 /* Protocol.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8AC3F50419A8A6EB00B497F6 /* Protocol.hpp */; };
+		8AC3F50C19A8A81300B497F6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3639F19A08B0B00CFF466 /* MainMenu.xib */; };
+		8AC3F50D19A8A86E00B497F6 /* ASTransmit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC3F4DC19A8A67F00B497F6 /* ASTransmit.framework */; };
+		8AC3F51519A8A89300B497F6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8AC3F51419A8A89300B497F6 /* main.cpp */; };
+		8AC3F51B19A8A8AA00B497F6 /* ASTransmit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC3F4DC19A8A67F00B497F6 /* ASTransmit.framework */; };
+		8AC3F51C19A8A9E300B497F6 /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6397119A85BF90044B1A4 /* libzmq.a */; };
+		8AC3F52119A8C7F100B497F6 /* ASMessage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AC3F52019A8C7F100B497F6 /* ASMessage.mm */; };
+		8AD6397219A85BF90044B1A4 /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6397119A85BF90044B1A4 /* libzmq.a */; };
 		8AEA8E4319A0A78E0037DE52 /* ASPlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA8E4219A0A78E0037DE52 /* ASPlotView.m */; };
 		8AEA8E4519A0B8470037DE52 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AEA8E4419A0B8470037DE52 /* GLKit.framework */; };
 		8AEA8E5819A1F4680037DE52 /* ASElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA8E5719A1F4680037DE52 /* ASElement.m */; };
@@ -42,7 +56,43 @@
 			remoteGlobalIDString = 8AA3638619A08B0B00CFF466;
 			remoteInfo = AirScope;
 		};
+		8AC3F50819A8A7B800B497F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AA3637F19A08B0A00CFF466 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AC3F4DB19A8A67F00B497F6;
+			remoteInfo = ASTransmit;
+		};
+		8AC3F51D19A8AB1E00B497F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AA3637F19A08B0A00CFF466 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AC3F4DB19A8A67F00B497F6;
+			remoteInfo = ASTransmit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8AC3F50619A8A78600B497F6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				8AC3F50719A8A7A400B497F6 /* libzmq.a in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC3F51019A8A89300B497F6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8A87784719A1F99D008EFA5D /* ASBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASBounds.h; sourceTree = "<group>"; };
@@ -81,6 +131,22 @@
 		8AA363D019A098E700CFF466 /* ASLine3D.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ASLine3D.mm; sourceTree = "<group>"; };
 		8AA363D319A09B8400CFF466 /* BasicElement.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BasicElement.vsh; sourceTree = "<group>"; };
 		8AA363D519A09B9C00CFF466 /* BasicElement.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BasicElement.fsh; sourceTree = "<group>"; };
+		8AB2C5C919A8155300385156 /* ASCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASCommunicator.h; sourceTree = "<group>"; };
+		8AB2C5CA19A8155300385156 /* ASCommunicator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ASCommunicator.mm; sourceTree = "<group>"; };
+		8AB2C5CC19A815A200385156 /* ASMissionControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASMissionControl.h; sourceTree = "<group>"; };
+		8AB2C5CD19A815A200385156 /* ASMissionControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASMissionControl.m; sourceTree = "<group>"; };
+		8AC3F4DC19A8A67F00B497F6 /* ASTransmit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ASTransmit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AC3F4E019A8A67F00B497F6 /* ASTransmit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ASTransmit-Info.plist"; sourceTree = "<group>"; };
+		8AC3F4E219A8A67F00B497F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8AC3F4E419A8A67F00B497F6 /* ASTransmit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ASTransmit-Prefix.pch"; sourceTree = "<group>"; };
+		8AC3F50019A8A6BC00B497F6 /* Plotter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plotter.cpp; sourceTree = "<group>"; };
+		8AC3F50119A8A6BC00B497F6 /* Plotter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Plotter.hpp; sourceTree = "<group>"; };
+		8AC3F50419A8A6EB00B497F6 /* Protocol.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Protocol.hpp; sourceTree = "<group>"; };
+		8AC3F51219A8A89300B497F6 /* AirScopeDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AirScopeDemo; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AC3F51419A8A89300B497F6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8AC3F51F19A8C7F100B497F6 /* ASMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASMessage.h; sourceTree = "<group>"; };
+		8AC3F52019A8C7F100B497F6 /* ASMessage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ASMessage.mm; sourceTree = "<group>"; };
+		8AD6397119A85BF90044B1A4 /* libzmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzmq.a; path = Libs/zeromq/lib/libzmq.a; sourceTree = "<group>"; };
 		8AEA8E4119A0A78E0037DE52 /* ASPlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPlotView.h; sourceTree = "<group>"; };
 		8AEA8E4219A0A78E0037DE52 /* ASPlotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPlotView.m; sourceTree = "<group>"; };
 		8AEA8E4419A0B8470037DE52 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -93,8 +159,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD6397219A85BF90044B1A4 /* libzmq.a in Frameworks */,
 				8AEA8E4519A0B8470037DE52 /* GLKit.framework in Frameworks */,
 				8AA3638B19A08B0B00CFF466 /* Cocoa.framework in Frameworks */,
+				8AC3F50D19A8A86E00B497F6 /* ASTransmit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +175,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8AC3F4D819A8A67F00B497F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC3F4DD19A8A67F00B497F6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC3F50F19A8A89300B497F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC3F51B19A8A8AA00B497F6 /* ASTransmit.framework in Frameworks */,
+				8AC3F51C19A8A9E300B497F6 /* libzmq.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -115,6 +200,8 @@
 			children = (
 				8AA3639019A08B0B00CFF466 /* AirScope */,
 				8AA363AE19A08B0B00CFF466 /* AirScopeTests */,
+				8AC3F4DE19A8A67F00B497F6 /* ASTransmit */,
+				8AC3F51319A8A89300B497F6 /* AirScopeDemo */,
 				8AA3638919A08B0B00CFF466 /* Frameworks */,
 				8AA3638819A08B0B00CFF466 /* Products */,
 			);
@@ -125,6 +212,8 @@
 			children = (
 				8AA3638719A08B0B00CFF466 /* AirScope.app */,
 				8AA363A819A08B0B00CFF466 /* AirScopeTests.xctest */,
+				8AC3F4DC19A8A67F00B497F6 /* ASTransmit.framework */,
+				8AC3F51219A8A89300B497F6 /* AirScopeDemo */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,6 +221,7 @@
 		8AA3638919A08B0B00CFF466 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8AD6397119A85BF90044B1A4 /* libzmq.a */,
 				8AEA8E4419A0B8470037DE52 /* GLKit.framework */,
 				8AA3638A19A08B0B00CFF466 /* Cocoa.framework */,
 				8AA363A919A08B0B00CFF466 /* XCTest.framework */,
@@ -176,6 +266,12 @@
 				8A87784819A1F99D008EFA5D /* ASBounds.m */,
 				8A87785D19A74301008EFA5D /* ASPlane.h */,
 				8A87785E19A74301008EFA5D /* ASPlane.m */,
+				8AB2C5CC19A815A200385156 /* ASMissionControl.h */,
+				8AB2C5CD19A815A200385156 /* ASMissionControl.m */,
+				8AB2C5C919A8155300385156 /* ASCommunicator.h */,
+				8AB2C5CA19A8155300385156 /* ASCommunicator.mm */,
+				8AC3F51F19A8C7F100B497F6 /* ASMessage.h */,
+				8AC3F52019A8C7F100B497F6 /* ASMessage.mm */,
 			);
 			path = AirScope;
 			sourceTree = "<group>";
@@ -221,7 +317,48 @@
 			path = Shaders;
 			sourceTree = "<group>";
 		};
+		8AC3F4DE19A8A67F00B497F6 /* ASTransmit */ = {
+			isa = PBXGroup;
+			children = (
+				8AC3F50419A8A6EB00B497F6 /* Protocol.hpp */,
+				8AC3F50019A8A6BC00B497F6 /* Plotter.cpp */,
+				8AC3F50119A8A6BC00B497F6 /* Plotter.hpp */,
+				8AC3F4DF19A8A67F00B497F6 /* Supporting Files */,
+			);
+			path = ASTransmit;
+			sourceTree = "<group>";
+		};
+		8AC3F4DF19A8A67F00B497F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AC3F4E019A8A67F00B497F6 /* ASTransmit-Info.plist */,
+				8AC3F4E119A8A67F00B497F6 /* InfoPlist.strings */,
+				8AC3F4E419A8A67F00B497F6 /* ASTransmit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8AC3F51319A8A89300B497F6 /* AirScopeDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8AC3F51419A8A89300B497F6 /* main.cpp */,
+			);
+			path = AirScopeDemo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8AC3F4D919A8A67F00B497F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC3F50319A8A6BC00B497F6 /* Plotter.hpp in Headers */,
+				8AC3F50B19A8A7FE00B497F6 /* Protocol.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		8AA3638619A08B0B00CFF466 /* AirScope */ = {
@@ -235,6 +372,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8AC3F50919A8A7B800B497F6 /* PBXTargetDependency */,
 			);
 			name = AirScope;
 			productName = AirScope;
@@ -258,6 +396,43 @@
 			productName = AirScopeTests;
 			productReference = 8AA363A819A08B0B00CFF466 /* AirScopeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8AC3F4DB19A8A67F00B497F6 /* ASTransmit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AC3F4FA19A8A67F00B497F6 /* Build configuration list for PBXNativeTarget "ASTransmit" */;
+			buildPhases = (
+				8AC3F4D719A8A67F00B497F6 /* Sources */,
+				8AC3F4D819A8A67F00B497F6 /* Frameworks */,
+				8AC3F4D919A8A67F00B497F6 /* Headers */,
+				8AC3F4DA19A8A67F00B497F6 /* Resources */,
+				8AC3F50619A8A78600B497F6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ASTransmit;
+			productName = ASTransmit;
+			productReference = 8AC3F4DC19A8A67F00B497F6 /* ASTransmit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8AC3F51119A8A89300B497F6 /* AirScopeDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AC3F51819A8A89300B497F6 /* Build configuration list for PBXNativeTarget "AirScopeDemo" */;
+			buildPhases = (
+				8AC3F50E19A8A89300B497F6 /* Sources */,
+				8AC3F50F19A8A89300B497F6 /* Frameworks */,
+				8AC3F51019A8A89300B497F6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AC3F51E19A8AB1E00B497F6 /* PBXTargetDependency */,
+			);
+			name = AirScopeDemo;
+			productName = AirScopeDemo;
+			productReference = 8AC3F51219A8A89300B497F6 /* AirScopeDemo */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -289,6 +464,8 @@
 			targets = (
 				8AA3638619A08B0B00CFF466 /* AirScope */,
 				8AA363A719A08B0B00CFF466 /* AirScopeTests */,
+				8AC3F4DB19A8A67F00B497F6 /* ASTransmit */,
+				8AC3F51119A8A89300B497F6 /* AirScopeDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -306,7 +483,7 @@
 				8AA363A319A08B0B00CFF466 /* Images.xcassets in Resources */,
 				8AA3639B19A08B0B00CFF466 /* Credits.rtf in Resources */,
 				8AA363D419A09B8400CFF466 /* BasicElement.vsh in Resources */,
-				8AA363A119A08B0B00CFF466 /* MainMenu.xib in Resources */,
+				8AC3F50C19A8A81300B497F6 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +492,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AA363B319A08B0B00CFF466 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC3F4DA19A8A67F00B497F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC3F4E319A8A67F00B497F6 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,9 +514,12 @@
 				8AA3639E19A08B0B00CFF466 /* ASAppDelegate.m in Sources */,
 				8AA3639719A08B0B00CFF466 /* main.m in Sources */,
 				8AEA8E5819A1F4680037DE52 /* ASElement.m in Sources */,
+				8AB2C5CB19A8155300385156 /* ASCommunicator.mm in Sources */,
 				8AA363D119A098E700CFF466 /* ASLine3D.mm in Sources */,
 				8A87784919A1F99D008EFA5D /* ASBounds.m in Sources */,
+				8AC3F52119A8C7F100B497F6 /* ASMessage.mm in Sources */,
 				8AA363C119A08B4E00CFF466 /* ASPlotController.m in Sources */,
+				8AB2C5CE19A815A200385156 /* ASMissionControl.m in Sources */,
 				8AA363CE19A0900100CFF466 /* Shader.m in Sources */,
 				8A87785F19A74301008EFA5D /* ASPlane.m in Sources */,
 				8AEA8E4319A0A78E0037DE52 /* ASPlotView.m in Sources */,
@@ -346,6 +534,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8AC3F4D719A8A67F00B497F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC3F50219A8A6BC00B497F6 /* Plotter.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC3F50E19A8A89300B497F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC3F51519A8A89300B497F6 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -353,6 +557,16 @@
 			isa = PBXTargetDependency;
 			target = 8AA3638619A08B0B00CFF466 /* AirScope */;
 			targetProxy = 8AA363AC19A08B0B00CFF466 /* PBXContainerItemProxy */;
+		};
+		8AC3F50919A8A7B800B497F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AC3F4DB19A8A67F00B497F6 /* ASTransmit */;
+			targetProxy = 8AC3F50819A8A7B800B497F6 /* PBXContainerItemProxy */;
+		};
+		8AC3F51E19A8AB1E00B497F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AC3F4DB19A8A67F00B497F6 /* ASTransmit */;
+			targetProxy = 8AC3F51D19A8AB1E00B497F6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -385,6 +599,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				8AA363B219A08B0B00CFF466 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8AC3F4E119A8A67F00B497F6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AC3F4E219A8A67F00B497F6 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -424,6 +646,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -457,6 +683,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
@@ -469,7 +699,18 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AirScope/AirScope-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/Libs/zeromq/include",
+					"$(SRCROOT)/Libs/cereal/include",
+					"$(SRCROOT)",
+				);
 				INFOPLIST_FILE = "AirScope/AirScope-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs/zeromq/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -482,7 +723,18 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AirScope/AirScope-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/Libs/zeromq/include",
+					"$(SRCROOT)/Libs/cereal/include",
+					"$(SRCROOT)",
+				);
 				INFOPLIST_FILE = "AirScope/AirScope-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs/zeromq/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -528,6 +780,90 @@
 			};
 			name = Release;
 		};
+		8AC3F4FB19A8A67F00B497F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ASTransmit/ASTransmit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/Libs/zeromq/include",
+					"$(SRCROOT)/Libs/cereal/include",
+				);
+				INFOPLIST_FILE = "ASTransmit/ASTransmit-Info.plist";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		8AC3F4FC19A8A67F00B497F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ASTransmit/ASTransmit-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/Libs/zeromq/include",
+					"$(SRCROOT)/Libs/cereal/include",
+				);
+				INFOPLIST_FILE = "ASTransmit/ASTransmit-Info.plist";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		8AC3F51919A8A89300B497F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs/zeromq/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8AC3F51A19A8A89300B497F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs/zeromq/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -554,6 +890,24 @@
 			buildConfigurations = (
 				8AA363BC19A08B0B00CFF466 /* Debug */,
 				8AA363BD19A08B0B00CFF466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AC3F4FA19A8A67F00B497F6 /* Build configuration list for PBXNativeTarget "ASTransmit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AC3F4FB19A8A67F00B497F6 /* Debug */,
+				8AC3F4FC19A8A67F00B497F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AC3F51819A8A89300B497F6 /* Build configuration list for PBXNativeTarget "AirScopeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AC3F51919A8A89300B497F6 /* Debug */,
+				8AC3F51A19A8A89300B497F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

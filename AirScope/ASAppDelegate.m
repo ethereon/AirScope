@@ -7,18 +7,20 @@
 //
 
 #import "ASAppDelegate.h"
-#import "ASPlotController.h"
+#import "ASMissionControl.h"
+#import "ASCommunicator.h"
 
 @interface ASAppDelegate ()
-@property (strong) ASPlotController* plotController;
+@property (strong) ASCommunicator* comm;
 @end
 
 @implementation ASAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    _plotController = [[ASPlotController alloc] init];
-    [_plotController showWindow:self];
+    _missionControl = [[ASMissionControl alloc] init];
+    _comm = [[ASCommunicator alloc] init];
+    [_comm start];
 }
 
 @end
