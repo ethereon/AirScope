@@ -6,15 +6,14 @@
 //  Copyright (c) 2014 Saumitro Dasgupta. All rights reserved.
 //
 
-#import "ASElement.h"
+#import "ASBasicElement.h"
 
-@interface ASLine3D : ASElement
+@interface ASLine3D : ASBasicElement
 
 -(void) clearPoints;
 
 -(void) appendPoint:(GLKVector3)p;
 
-@property (assign) GLKVector4 lineColor;
 @property (assign) float lineWidth;
 
 @end

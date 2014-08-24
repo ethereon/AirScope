@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Saumitro Dasgupta. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "ASBasicElement.h"
 
-@interface ASPlane : NSObject
+@interface ASPlane : ASBasicElement
 
 @end

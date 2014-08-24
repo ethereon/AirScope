@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A34941819AA9AC300A2EBDC /* ASBasicElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A34941719AA9AC300A2EBDC /* ASBasicElement.m */; };
 		8A87784919A1F99D008EFA5D /* ASBounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A87784819A1F99D008EFA5D /* ASBounds.m */; };
 		8A87784C19A20028008EFA5D /* ASPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A87784B19A20028008EFA5D /* ASPlot.m */; };
-		8A87785B19A742DA008EFA5D /* Plane.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8A87785919A742DA008EFA5D /* Plane.fsh */; };
-		8A87785C19A742DA008EFA5D /* Plane.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 8A87785A19A742DA008EFA5D /* Plane.vsh */; };
 		8A87785F19A74301008EFA5D /* ASPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A87785E19A74301008EFA5D /* ASPlane.m */; };
 		8AA3638B19A08B0B00CFF466 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA3638A19A08B0B00CFF466 /* Cocoa.framework */; };
 		8AA3639519A08B0B00CFF466 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3639319A08B0B00CFF466 /* InfoPlist.strings */; };
@@ -95,12 +94,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8A34941619AA9AC300A2EBDC /* ASBasicElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASBasicElement.h; sourceTree = "<group>"; };
+		8A34941719AA9AC300A2EBDC /* ASBasicElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASBasicElement.m; sourceTree = "<group>"; };
 		8A87784719A1F99D008EFA5D /* ASBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASBounds.h; sourceTree = "<group>"; };
 		8A87784819A1F99D008EFA5D /* ASBounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASBounds.m; sourceTree = "<group>"; };
 		8A87784A19A20028008EFA5D /* ASPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPlot.h; sourceTree = "<group>"; };
 		8A87784B19A20028008EFA5D /* ASPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPlot.m; sourceTree = "<group>"; };
-		8A87785919A742DA008EFA5D /* Plane.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Plane.fsh; sourceTree = "<group>"; };
-		8A87785A19A742DA008EFA5D /* Plane.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Plane.vsh; sourceTree = "<group>"; };
 		8A87785D19A74301008EFA5D /* ASPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPlane.h; sourceTree = "<group>"; };
 		8A87785E19A74301008EFA5D /* ASPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPlane.m; sourceTree = "<group>"; };
 		8AA3638719A08B0B00CFF466 /* AirScope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirScope.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,18 +253,20 @@
 				8AA363C019A08B4E00CFF466 /* ASPlotWindow.xib */,
 				8AA363CC19A0900100CFF466 /* Shader.h */,
 				8AA363CD19A0900100CFF466 /* Shader.m */,
+				8A34941619AA9AC300A2EBDC /* ASBasicElement.h */,
+				8A34941719AA9AC300A2EBDC /* ASBasicElement.m */,
 				8A87784A19A20028008EFA5D /* ASPlot.h */,
 				8A87784B19A20028008EFA5D /* ASPlot.m */,
 				8AA363CF19A098E700CFF466 /* ASLine3D.h */,
 				8AA363D019A098E700CFF466 /* ASLine3D.mm */,
+				8A87785D19A74301008EFA5D /* ASPlane.h */,
+				8A87785E19A74301008EFA5D /* ASPlane.m */,
 				8AEA8E4119A0A78E0037DE52 /* ASPlotView.h */,
 				8AEA8E4219A0A78E0037DE52 /* ASPlotView.m */,
 				8AEA8E5619A1F4680037DE52 /* ASElement.h */,
 				8AEA8E5719A1F4680037DE52 /* ASElement.m */,
 				8A87784719A1F99D008EFA5D /* ASBounds.h */,
 				8A87784819A1F99D008EFA5D /* ASBounds.m */,
-				8A87785D19A74301008EFA5D /* ASPlane.h */,
-				8A87785E19A74301008EFA5D /* ASPlane.m */,
 				8AB2C5CC19A815A200385156 /* ASMissionControl.h */,
 				8AB2C5CD19A815A200385156 /* ASMissionControl.m */,
 				8AB2C5C919A8155300385156 /* ASCommunicator.h */,
@@ -309,8 +310,6 @@
 		8AA363D219A09B6600CFF466 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				8A87785919A742DA008EFA5D /* Plane.fsh */,
-				8A87785A19A742DA008EFA5D /* Plane.vsh */,
 				8AA363D319A09B8400CFF466 /* BasicElement.vsh */,
 				8AA363D519A09B9C00CFF466 /* BasicElement.fsh */,
 			);
@@ -475,10 +474,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A87785B19A742DA008EFA5D /* Plane.fsh in Resources */,
 				8AA363C219A08B4E00CFF466 /* ASPlotWindow.xib in Resources */,
 				8AA3639519A08B0B00CFF466 /* InfoPlist.strings in Resources */,
-				8A87785C19A742DA008EFA5D /* Plane.vsh in Resources */,
 				8AA363D619A09B9C00CFF466 /* BasicElement.fsh in Resources */,
 				8AA363A319A08B0B00CFF466 /* Images.xcassets in Resources */,
 				8AA3639B19A08B0B00CFF466 /* Credits.rtf in Resources */,
@@ -511,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A87784C19A20028008EFA5D /* ASPlot.m in Sources */,
+				8A34941819AA9AC300A2EBDC /* ASBasicElement.m in Sources */,
 				8AA3639E19A08B0B00CFF466 /* ASAppDelegate.m in Sources */,
 				8AA3639719A08B0B00CFF466 /* main.m in Sources */,
 				8AEA8E5819A1F4680037DE52 /* ASElement.m in Sources */,

@@ -9,14 +9,20 @@
 #import <Foundation/Foundation.h>
 #import <GLKit/GLKit.h>
 #import "ASBounds.h"
+#import "Shader.h"
 
 @class ASPlot;
 
 @interface ASElement : NSObject
 
+-(BOOL) isNormalized;
+
 -(void) render;
 
-@property (assign) GLKMatrix4 transform;
-@property (strong) ASBounds* bounds;
+-(void) setupShader;
+
+@property (assign, nonatomic) GLKMatrix4 transform;
+@property (strong, nonatomic) ASBounds* bounds;
+@property (strong, nonatomic) Shader* shader;
 
 @end

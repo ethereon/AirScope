@@ -8,6 +8,9 @@
 
 #import "ASPlotController.h"
 #import "ASLine3D.h"
+#import "ASPlane.h"
+
+static NSString* const kGroundPlaneKey = @"__as-ground-plane";
 
 @interface ASPlotController ()
 @property (strong) NSMutableDictionary* elements;
@@ -20,6 +23,7 @@
     if(!(self = [super initWithWindowNibName:@"ASPlotWindow"])) return nil;
     _elements = [NSMutableDictionary dictionary];
     _plot = [[ASPlot alloc] init];
+    [self addElement:[[ASPlane alloc] init] withKey:kGroundPlaneKey];
     return self;
 }
 
@@ -44,14 +48,19 @@
     [_plotView setNeedsDisplay:YES];
 }
 
+-(void) addElement:(ASElement*)elem withKey:(NSString*)elemKey
+{
+    _elements[elemKey] = elem;
+    [_plot addElement:elem];
+}
+
 -(void) addPoint:(GLKVector3)p toLineWithKey:(NSString*)lineKey
 {
     ASLine3D* line = _elements[lineKey];
     if(line==nil)
     {
         line = [[ASLine3D alloc] init];
-        _elements[lineKey] = line;
-        [_plot addElement:line];
+        [self addElement:line withKey:lineKey];
     }
     assert([line isKindOfClass:[ASLine3D class]]);
     [line appendPoint:p];

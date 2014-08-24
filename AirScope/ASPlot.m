@@ -39,10 +39,20 @@
 
 -(void) renderInView:(ASPlotView*)plotView
 {
-    GLKMatrix4 xform = [self transformForView:plotView];
+    //Normalize the data to [-0.5, 0.5] along each axis.
+    GLKMatrix4 N;
+    GLKVector3 dataCenter = [_dataBounds center];
+    N = GLKMatrix4MakeTranslation(-dataCenter.x, -dataCenter.y, -dataCenter.z);
+    N = GLKMatrix4Multiply(GLKMatrix4MakeScale(1.0f/[_dataBounds spanX],
+                                                1.0f/[_dataBounds spanY],
+                                                1.0f/[_dataBounds spanZ]), N);
+
+    //Base Model-View-Projection.
+    GLKMatrix4 T = [self transformForView:plotView];
+    GLKMatrix4 TN = GLKMatrix4Multiply(T, N);
     for(ASElement* elem in _elements)
     {
-        [elem setTransform:xform];
+        [elem setTransform:[elem isNormalized]?T:TN];
         [elem render];
     }
 }
@@ -59,20 +69,10 @@
 
 -(GLKMatrix4) transformForView:(ASPlotView*)plotView
 {
-    GLKMatrix4 MV;
-
-    //Normalize the data to [-0.5, 0.5] along each axis.
-    GLKVector3 dataCenter = [_dataBounds center];
-    MV = GLKMatrix4MakeTranslation(-dataCenter.x, -dataCenter.y, -dataCenter.z);
-    MV = GLKMatrix4Multiply(GLKMatrix4MakeScale(1.0f/[_dataBounds spanX],
-                                                1.0f/[_dataBounds spanY],
-                                                1.0f/[_dataBounds spanZ]), MV);
-
     //Rotate the model.
-    GLKMatrix4 modelRotation = GLKMatrix4MakeXRotation(_xRotation);
-    modelRotation = GLKMatrix4Multiply(GLKMatrix4MakeYRotation(_yRotation), modelRotation);
-    modelRotation = GLKMatrix4Multiply(GLKMatrix4MakeZRotation(_zRotation), modelRotation);
-    MV = GLKMatrix4Multiply(modelRotation, MV);
+    GLKMatrix4 MV = GLKMatrix4MakeXRotation(_xRotation);
+    MV = GLKMatrix4Multiply(GLKMatrix4MakeYRotation(_yRotation), MV);
+    MV = GLKMatrix4Multiply(GLKMatrix4MakeZRotation(_zRotation), MV);
 
     //Setup orthographic projection.
     NSSize viewSize = [plotView bounds].size;
