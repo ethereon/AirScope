@@ -12,11 +12,6 @@
 #include <string>
 #include <vector>
 
-/* Command Constants */
-
-#define AS_CMD_NEW_PLOT             "+"
-#define AS_CMD_ADD_LINE_POINT       "A"
-
 /* Protocol Constants */
 
 #define AS_DEFAULT_ADDRESS          "tcp://0.0.0.0:4242"
@@ -30,7 +25,14 @@ void serialize(Archive& archive) \
 
 namespace as
 {
-    namespace cmd
+    enum class OpCode : char
+    {
+        NewPlot,
+        AddPointToLine,
+        AddPointToCloud
+    };
+
+    namespace op
     {
         struct NewPlot
         {
@@ -39,13 +41,13 @@ namespace as
             AS_SERIALIZE(title, resetExistingPlot);
         };
 
-        struct AddLinePoint
+        struct PointOp
         {
-            std::string lineKey;
+            std::string elementKey;
             float x;
             float y;
             float z;
-            AS_SERIALIZE(lineKey, x, y, z);
+            AS_SERIALIZE(elementKey, x, y, z);
         };
     }
 }

@@ -12,7 +12,7 @@
 @implementation ASMessage
 {
     std::stringstream _ss;
-    std::string _command;
+    as::OpCode _opCode;
     MsgArchive* _archive;
 }
 
@@ -21,7 +21,7 @@
     ASMessage* msg = [[ASMessage alloc] init];
     msg->_ss.write((const char*)msgData, msgLen);
     msg->_archive = new MsgArchive(msg->_ss);
-    [msg archive](msg->_command);
+    [msg archive](msg->_opCode);
     std::string plotKey;
     [msg archive](plotKey);
     [msg setPlotKey:[NSString stringWithUTF8String:plotKey.c_str()]];
@@ -36,9 +36,9 @@
     }
 }
 
--(const std::string&) command
+-(as::OpCode) opCode;
 {
-    return _command;
+    return _opCode;
 }
 
 -(MsgArchive&) archive

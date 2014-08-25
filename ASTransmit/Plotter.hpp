@@ -27,7 +27,8 @@ namespace as
         ~Plotter();
 
         void plot(float x, float y, float z);
-        void plotLine(float x, float y, float z, const std::string& lineKey);
+        void plotLine(float x, float y, float z, const std::string& lineKey=AS_AUTO_DETECT);
+        void plotPoint(float x, float y, float z, const std::string& cloudKey=AS_AUTO_DETECT);
 
     private:
 
@@ -38,7 +39,8 @@ namespace as
         bool connect(const std::string& address);
         void disconnect();
         void start(const std::string& plotTitle, bool resetExisting=true);
-        template <typename CMD> void transmitCommand(const char* name, const CMD& cmd);
+        template <typename OP> void transmitPointOp(float x, float y, float z, const std::string& elemKey, OP opCode);
+        template <typename OP, typename CMD> void transmitCommand(OP opCode, const CMD& cmd);
         void transmitString(const std::string& dataString);
     };
 }

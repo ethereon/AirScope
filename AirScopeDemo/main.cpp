@@ -40,9 +40,21 @@ void plot_lorenz_attractor(float sigma = 10.0f,
     }
 }
 
+void plot_sphere(float rho=1.0f, float inc=0.1)
+{
+    as::Plotter plt("Sphere");
+    for(float theta=0.0f; theta<2*M_PI; theta+=inc)
+    {
+        for(float phi=0.0f; phi<2*M_PI; phi+=inc)
+        {
+            plt.plotPoint(rho*cos(theta)*sin(phi), rho*sin(theta)*sin(phi), rho*cos(phi));
+        }
+    }
+}
+
 int main(int argc, const char * argv[])
 {
-    plot_lorenz_attractor();
+    plot_sphere();
     return 0;
 }
 

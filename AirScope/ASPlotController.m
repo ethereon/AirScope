@@ -9,6 +9,7 @@
 #import "ASPlotController.h"
 #import "ASLine3D.h"
 #import "ASPlane.h"
+#import "ASPointCloud.h"
 
 static NSString* const kGroundPlaneKey = @"__as-ground-plane";
 
@@ -54,16 +55,26 @@ static NSString* const kGroundPlaneKey = @"__as-ground-plane";
     [_plot addElement:elem];
 }
 
+-(void) addPoint:(GLKVector3)p toElementOfClass:(Class)ElemClass withKey:(NSString*)elemKey
+{
+    ASPointsElement* elem = _elements[elemKey];
+    if(elem==nil)
+    {
+        elem = [[ElemClass alloc] init];
+        [self addElement:elem withKey:elemKey];
+    }
+    assert([elem isKindOfClass:ElemClass]);
+    [elem addPoint:p];
+}
+
 -(void) addPoint:(GLKVector3)p toLineWithKey:(NSString*)lineKey
 {
-    ASLine3D* line = _elements[lineKey];
-    if(line==nil)
-    {
-        line = [[ASLine3D alloc] init];
-        [self addElement:line withKey:lineKey];
-    }
-    assert([line isKindOfClass:[ASLine3D class]]);
-    [line appendPoint:p];
+    [self addPoint:p toElementOfClass:[ASLine3D class] withKey:lineKey];
+}
+
+-(void) addPoint:(GLKVector3)p toCloudWithKey:(NSString*)cloudKey
+{
+    [self addPoint:p toElementOfClass:[ASPointCloud class] withKey:cloudKey];
 }
 
 @end

@@ -16,6 +16,7 @@
 -(void) update;
 
 -(void) addPoint:(GLKVector3)p toLineWithKey:(NSString*)lineKey;
+-(void) addPoint:(GLKVector3)p toCloudWithKey:(NSString*)cloudKey;
 
 @property (strong) IBOutlet ASPlotView* plotView;
 @property (strong) ASPlot* plot;

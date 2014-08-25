@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8A34941819AA9AC300A2EBDC /* ASBasicElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A34941719AA9AC300A2EBDC /* ASBasicElement.m */; };
+		8A34941F19AAA67500A2EBDC /* ASPointCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A34941E19AAA67500A2EBDC /* ASPointCloud.m */; };
+		8A34942519AACBA600A2EBDC /* ASPointsElement.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A34942419AACBA600A2EBDC /* ASPointsElement.mm */; };
 		8A87784919A1F99D008EFA5D /* ASBounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A87784819A1F99D008EFA5D /* ASBounds.m */; };
 		8A87784C19A20028008EFA5D /* ASPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A87784B19A20028008EFA5D /* ASPlot.m */; };
 		8A87785F19A74301008EFA5D /* ASPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A87785E19A74301008EFA5D /* ASPlane.m */; };
@@ -96,6 +98,10 @@
 /* Begin PBXFileReference section */
 		8A34941619AA9AC300A2EBDC /* ASBasicElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASBasicElement.h; sourceTree = "<group>"; };
 		8A34941719AA9AC300A2EBDC /* ASBasicElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASBasicElement.m; sourceTree = "<group>"; };
+		8A34941D19AAA67500A2EBDC /* ASPointCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPointCloud.h; sourceTree = "<group>"; };
+		8A34941E19AAA67500A2EBDC /* ASPointCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPointCloud.m; sourceTree = "<group>"; };
+		8A34942319AACBA600A2EBDC /* ASPointsElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPointsElement.h; sourceTree = "<group>"; };
+		8A34942419AACBA600A2EBDC /* ASPointsElement.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ASPointsElement.mm; sourceTree = "<group>"; };
 		8A87784719A1F99D008EFA5D /* ASBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASBounds.h; sourceTree = "<group>"; };
 		8A87784819A1F99D008EFA5D /* ASBounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASBounds.m; sourceTree = "<group>"; };
 		8A87784A19A20028008EFA5D /* ASPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPlot.h; sourceTree = "<group>"; };
@@ -194,6 +200,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A34941919AAA5F700A2EBDC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8AA363D219A09B6600CFF466 /* Shaders */,
+				8A34941A19AAA5FE00A2EBDC /* XIBs */,
+				8A34941B19AAA61100A2EBDC /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8A34941A19AAA5FE00A2EBDC /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				8AA363C019A08B4E00CFF466 /* ASPlotWindow.xib */,
+				8AA3639F19A08B0B00CFF466 /* MainMenu.xib */,
+			);
+			name = XIBs;
+			sourceTree = "<group>";
+		};
+		8A34941B19AAA61100A2EBDC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8AA363A219A08B0B00CFF466 /* Images.xcassets */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		8A34941C19AAA63600A2EBDC /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				8AEA8E5619A1F4680037DE52 /* ASElement.h */,
+				8AEA8E5719A1F4680037DE52 /* ASElement.m */,
+				8A34941619AA9AC300A2EBDC /* ASBasicElement.h */,
+				8A34941719AA9AC300A2EBDC /* ASBasicElement.m */,
+				8AA363CF19A098E700CFF466 /* ASLine3D.h */,
+				8AA363D019A098E700CFF466 /* ASLine3D.mm */,
+				8A87785D19A74301008EFA5D /* ASPlane.h */,
+				8A87785E19A74301008EFA5D /* ASPlane.m */,
+				8A34941D19AAA67500A2EBDC /* ASPointCloud.h */,
+				8A34941E19AAA67500A2EBDC /* ASPointCloud.m */,
+				8A34942319AACBA600A2EBDC /* ASPointsElement.h */,
+				8A34942419AACBA600A2EBDC /* ASPointsElement.mm */,
+			);
+			name = Elements;
+			sourceTree = "<group>";
+		};
 		8AA3637E19A08B0A00CFF466 = {
 			isa = PBXGroup;
 			children = (
@@ -242,29 +294,19 @@
 		8AA3639019A08B0B00CFF466 /* AirScope */ = {
 			isa = PBXGroup;
 			children = (
-				8AA363D219A09B6600CFF466 /* Shaders */,
+				8A34941919AAA5F700A2EBDC /* Resources */,
+				8AA3639119A08B0B00CFF466 /* Supporting Files */,
+				8A34941C19AAA63600A2EBDC /* Elements */,
 				8AA3639C19A08B0B00CFF466 /* ASAppDelegate.h */,
 				8AA3639D19A08B0B00CFF466 /* ASAppDelegate.m */,
-				8AA3639F19A08B0B00CFF466 /* MainMenu.xib */,
-				8AA363A219A08B0B00CFF466 /* Images.xcassets */,
-				8AA3639119A08B0B00CFF466 /* Supporting Files */,
 				8AA363BE19A08B4E00CFF466 /* ASPlotController.h */,
 				8AA363BF19A08B4E00CFF466 /* ASPlotController.m */,
-				8AA363C019A08B4E00CFF466 /* ASPlotWindow.xib */,
 				8AA363CC19A0900100CFF466 /* Shader.h */,
 				8AA363CD19A0900100CFF466 /* Shader.m */,
-				8A34941619AA9AC300A2EBDC /* ASBasicElement.h */,
-				8A34941719AA9AC300A2EBDC /* ASBasicElement.m */,
 				8A87784A19A20028008EFA5D /* ASPlot.h */,
 				8A87784B19A20028008EFA5D /* ASPlot.m */,
-				8AA363CF19A098E700CFF466 /* ASLine3D.h */,
-				8AA363D019A098E700CFF466 /* ASLine3D.mm */,
-				8A87785D19A74301008EFA5D /* ASPlane.h */,
-				8A87785E19A74301008EFA5D /* ASPlane.m */,
 				8AEA8E4119A0A78E0037DE52 /* ASPlotView.h */,
 				8AEA8E4219A0A78E0037DE52 /* ASPlotView.m */,
-				8AEA8E5619A1F4680037DE52 /* ASElement.h */,
-				8AEA8E5719A1F4680037DE52 /* ASElement.m */,
 				8A87784719A1F99D008EFA5D /* ASBounds.h */,
 				8A87784819A1F99D008EFA5D /* ASBounds.m */,
 				8AB2C5CC19A815A200385156 /* ASMissionControl.h */,
@@ -514,6 +556,7 @@
 				8AEA8E5819A1F4680037DE52 /* ASElement.m in Sources */,
 				8AB2C5CB19A8155300385156 /* ASCommunicator.mm in Sources */,
 				8AA363D119A098E700CFF466 /* ASLine3D.mm in Sources */,
+				8A34942519AACBA600A2EBDC /* ASPointsElement.mm in Sources */,
 				8A87784919A1F99D008EFA5D /* ASBounds.m in Sources */,
 				8AC3F52119A8C7F100B497F6 /* ASMessage.mm in Sources */,
 				8AA363C119A08B4E00CFF466 /* ASPlotController.m in Sources */,
@@ -521,6 +564,7 @@
 				8AA363CE19A0900100CFF466 /* Shader.m in Sources */,
 				8A87785F19A74301008EFA5D /* ASPlane.m in Sources */,
 				8AEA8E4319A0A78E0037DE52 /* ASPlotView.m in Sources */,
+				8A34941F19AAA67500A2EBDC /* ASPointCloud.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

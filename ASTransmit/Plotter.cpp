@@ -16,6 +16,7 @@
 #include <cereal/types/string.hpp>
 
 static const std::string kDefaultLineKey = "DefaultLine";
+static const std::string kDefaultCloudKey = "DefaultCloud";
 
 using namespace as;
 
@@ -67,20 +68,22 @@ void Plotter::disconnect()
 
 void Plotter::start(const std::string& plotTitle, bool resetExisting)
 {
-    as::cmd::NewPlot cmd;
+    op::NewPlot cmd;
     cmd.title = plotTitle;
     cmd.resetExistingPlot = resetExisting;
-    this->transmitCommand(AS_CMD_NEW_PLOT, cmd);
+    this->transmitCommand(OpCode::NewPlot, cmd);
 }
 
 void Plotter::plotLine(float x, float y, float z, const std::string& lineKey)
 {
-    as::cmd::AddLinePoint cmd;
-    cmd.lineKey = lineKey;
-    cmd.x = x;
-    cmd.y = y;
-    cmd.z = z;
-    this->transmitCommand(AS_CMD_ADD_LINE_POINT, cmd);
+    const std::string& elemKey = lineKey==AS_AUTO_DETECT?kDefaultLineKey:lineKey;
+    this->transmitPointOp(x, y, z, elemKey, OpCode::AddPointToLine);
+}
+
+void Plotter::plotPoint(float x, float y, float z, const std::string& cloudKey)
+{
+    const std::string& elemKey = cloudKey==AS_AUTO_DETECT?kDefaultCloudKey:cloudKey;
+    this->transmitPointOp(x, y, z, elemKey, OpCode::AddPointToCloud);
 }
 
 void Plotter::plot(float x, float y, float z)
@@ -88,14 +91,24 @@ void Plotter::plot(float x, float y, float z)
     this->plotLine(x, y, z, kDefaultLineKey);
 }
 
-template <typename CMD> void Plotter::transmitCommand(const char* name, const CMD& cmd)
+template <typename OP> void Plotter::transmitPointOp(float x, float y, float z, const std::string& elemKey, OP opCode)
+{
+    op::PointOp cmd;
+    cmd.elementKey = elemKey;
+    cmd.x = x;
+    cmd.y = y;
+    cmd.z = z;
+    this->transmitCommand(opCode, cmd);
+}
+
+template <typename OP, typename CMD> void Plotter::transmitCommand(OP opCode, const CMD& cmd)
 {
     assert(plotKey_.length()>0);
     std::stringstream ss(std::ios::in | std::ios::out | std::ios::binary);
     {
         //Archive flushes content on destruction.
         cereal::BinaryOutputArchive archive(ss);
-        archive(std::string(name));
+        archive(opCode);
         archive(plotKey_);
         archive(cmd);
     }

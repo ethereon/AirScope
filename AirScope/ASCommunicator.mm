@@ -11,7 +11,6 @@
 #import "ASPlotController.h"
 #import "ASMessage.h"
 #import <zmq.h>
-#import <ASTransmit/Protocol.hpp>
 
 using namespace as;
 
@@ -77,28 +76,28 @@ using namespace as;
 
 -(void) handleMessage:(ASMessage*)msg
 {
-    const std::string& cmd = [msg command];
-    if(cmd==AS_CMD_NEW_PLOT)
+    OpCode operation = [msg opCode];
+    switch (operation)
     {
-        [self handleNewPlotCommand:msg];
-    }
-    else if(cmd==AS_CMD_ADD_LINE_POINT)
-    {
-        [self handleAddLinePointCommand:msg];
-    }
-    else
-    {
-        NSLog(@"Received unknown command: %s", cmd.c_str());
+        case OpCode::NewPlot:
+            [self handleNewPlotMessage:msg];
+            break;
+        case OpCode::AddPointToCloud:
+        case OpCode::AddPointToLine:
+            [self handleAddPointMessage:msg forOperation:operation];
+            break;
+        default:
+            NSLog(@"Received unknown operation code: %d", (int)operation);
     }
 }
 
 #pragma mark - Command Handlers
 
--(void) handleNewPlotCommand:(ASMessage*)msg
+-(void) handleNewPlotMessage:(ASMessage*)msg
 {
     dispatch_async(dispatch_get_main_queue(),
                    ^{
-                       cmd::NewPlot cmd;
+                       op::NewPlot cmd;
                        [msg archive](cmd);
                        ASPlotController* plotController = [[ASMissionControl central] beginPlotWithKey:[msg plotKey]
                                                                                          resetExisting:cmd.resetExistingPlot];
@@ -106,7 +105,7 @@ using namespace as;
                    });
 }
 
--(void) handleAddLinePointCommand:(ASMessage*)msg
+-(void) handleAddPointMessage:(ASMessage*)msg forOperation:(OpCode)opCode
 {
     dispatch_async(dispatch_get_main_queue(),
                    ^{
@@ -116,13 +115,27 @@ using namespace as;
                            NSLog(@"Received plotting command for unknown plot key: %@", [msg plotKey]);
                            return;
                        }
-                       cmd::AddLinePoint cmd;
+                       op::PointOp cmd;
                        [msg archive](cmd);
-                       [plotController addPoint:GLKVector3Make(cmd.x, cmd.y, cmd.z)
-                                  toLineWithKey:NSStringFromString(cmd.lineKey)];
+                       GLKVector3 pt = GLKVector3Make(cmd.x, cmd.y, cmd.z);
+                       NSString* elemKey = NSStringFromString(cmd.elementKey);
+                       switch (opCode)
+                       {
+                           case OpCode::AddPointToLine:
+                               [plotController addPoint:pt toLineWithKey:elemKey];
+                               break;
+                           case OpCode::AddPointToCloud:
+                               [plotController addPoint:pt toCloudWithKey:elemKey];
+                               break;
+                           default:
+                               NSLog(@"Invalid operation code for add point message encountered.");                               
+                               break;
+                       }
                        [plotController update];
                    });
 }
+
+
 
 #pragma mark - Utility
 

@@ -10,6 +10,7 @@
 #include <string>
 #include <cereal/archives/binary.hpp>
 #include <cereal/types/string.hpp>
+#import <ASTransmit/Protocol.hpp>
 
 typedef cereal::BinaryInputArchive MsgArchive;
 
@@ -17,7 +18,7 @@ typedef cereal::BinaryInputArchive MsgArchive;
 
 +(ASMessage*) messageFromData:(void*)msgData ofLength:(size_t)msgLen;
 
--(const std::string&) command;
+-(as::OpCode) opCode;
 
 -(MsgArchive&) archive;
 

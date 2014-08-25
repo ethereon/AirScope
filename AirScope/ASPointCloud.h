@@ -1,13 +1,13 @@
 //
-//  ASLine3D.h
+//  ASPointCloud.h
 //  AirScope
 //
-//  Created by Saumitro Dasgupta on 8/17/14.
+//  Created by Saumitro Dasgupta on 8/24/14.
 //  Copyright (c) 2014 Saumitro Dasgupta. All rights reserved.
 //
 
 #import "ASPointsElement.h"
 
-@interface ASLine3D : ASPointsElement
+@interface ASPointCloud : ASPointsElement
 
 @end
