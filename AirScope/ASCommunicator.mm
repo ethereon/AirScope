@@ -109,12 +109,7 @@ using namespace as;
 {
     dispatch_async(dispatch_get_main_queue(),
                    ^{
-                       ASPlotController* plotController = [[ASMissionControl central] plotControllerForKey:[msg plotKey]];
-                       if(plotController==nil)
-                       {
-                           NSLog(@"Received plotting command for unknown plot key: %@", [msg plotKey]);
-                           return;
-                       }
+                       ASPlotController* plotController = [[ASMissionControl central] plotControllerForKey:[msg plotKey] autoCreate:YES];
                        op::PointOp cmd;
                        [msg archive](cmd);
                        GLKVector3 pt = GLKVector3Make(cmd.x, cmd.y, cmd.z);

@@ -18,6 +18,8 @@
 
 -(ASPlotController*) plotControllerForKey:(NSString*)plotKey;
 
+-(ASPlotController*) plotControllerForKey:(NSString*)plotKey autoCreate:(BOOL)autoCreate;
+
 -(void) removePlotController:(ASPlotController*)plotController;
 
 @end

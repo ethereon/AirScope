@@ -48,12 +48,23 @@
     }
 }
 
--(ASPlotController*) plotControllerForKey:(NSString*)plotKey
+-(ASPlotController*) plotControllerForKey:(NSString*)plotKey autoCreate:(BOOL)autoCreate
 {
+
     @synchronized(_plotControllers)
     {
-        return _plotControllers[plotKey];
+        ASPlotController* pc = _plotControllers[plotKey];
+        if((pc==nil) && autoCreate)
+        {
+            pc = [self beginPlotWithKey:plotKey resetExisting:NO];
+        }
+        return pc;
     }
+}
+
+-(ASPlotController*) plotControllerForKey:(NSString*)plotKey
+{
+    return [self plotControllerForKey:plotKey autoCreate:NO];
 }
 
 -(NSString*) keyForPlotController:(ASPlotController*)plotController
@@ -73,10 +84,11 @@
 
 -(void) removePlotController:(ASPlotController*)plotController
 {
-    NSString* key = [self keyForPlotController:plotController];
-    assert(key!=nil);
     @synchronized(_plotControllers)
     {
+        NSString* key = [self keyForPlotController:plotController];
+        assert(key!=nil);
+
         [_plotControllers removeObjectForKey:key];
     }
 }
