@@ -1,17 +1,20 @@
 //
-//  main.cpp
-//  AirScopeDemo
+//  ASDemos.m
+//  AirScope
 //
-//  Created by Saumitro Dasgupta on 8/23/14.
+//  Created by Saumitro Dasgupta on 8/28/14.
 //  Copyright (c) 2014 Saumitro Dasgupta. All rights reserved.
 //
 
+#import "ASDemos.h"
 #include <iostream>
 #include <cmath>
 #include <unistd.h>
 #include <ASTransmit/Plotter.hpp>
 
-void plot_helix()
+@implementation ASDemos
+
+static void plot_helix()
 {
     as::Plotter plt("Helix");
     for(float theta=0; theta<10*M_PI; theta+=0.01)
@@ -20,11 +23,11 @@ void plot_helix()
     }
 }
 
-void plot_lorenz_attractor(float sigma = 10.0f,
-                           float rho = 28.0f,
-                           float beta = 8.0f/3.0f,
-                           int numIters = 1000,
-                           float delay = 2000)
+static void plot_lorenz_attractor(float sigma = 10.0f,
+                                  float rho = 28.0f,
+                                  float beta = 8.0f/3.0f,
+                                  int numIters = 1000,
+                                  float delay = 2000)
 {
     as::Plotter plt("Lorenz Attractor");
     const float dt=0.01f;
@@ -40,7 +43,7 @@ void plot_lorenz_attractor(float sigma = 10.0f,
     }
 }
 
-void plot_sphere(float rho=1.0f, float inc=0.1)
+static void plot_sphere(float rho=1.0f, float inc=0.1)
 {
     as::Plotter plt("Sphere");
     for(float theta=0.0f; theta<2*M_PI; theta+=inc)
@@ -52,9 +55,19 @@ void plot_sphere(float rho=1.0f, float inc=0.1)
     }
 }
 
-int main(int argc, const char * argv[])
+static void launch_demos()
 {
+    plot_helix();
+    plot_sphere();
     plot_lorenz_attractor();
-    return 0;
 }
 
++(void) launchDemos
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                   ^{
+                       launch_demos();
+                   });
+}
+
+@end

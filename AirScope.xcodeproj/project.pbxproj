@@ -39,11 +39,9 @@
 		8AC3F50B19A8A7FE00B497F6 /* Protocol.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8AC3F50419A8A6EB00B497F6 /* Protocol.hpp */; };
 		8AC3F50C19A8A81300B497F6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3639F19A08B0B00CFF466 /* MainMenu.xib */; };
 		8AC3F50D19A8A86E00B497F6 /* ASTransmit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC3F4DC19A8A67F00B497F6 /* ASTransmit.framework */; };
-		8AC3F51519A8A89300B497F6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8AC3F51419A8A89300B497F6 /* main.cpp */; };
-		8AC3F51B19A8A8AA00B497F6 /* ASTransmit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC3F4DC19A8A67F00B497F6 /* ASTransmit.framework */; };
-		8AC3F51C19A8A9E300B497F6 /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6397119A85BF90044B1A4 /* libzmq.a */; };
 		8AC3F52119A8C7F100B497F6 /* ASMessage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AC3F52019A8C7F100B497F6 /* ASMessage.mm */; };
 		8AD6397219A85BF90044B1A4 /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6397119A85BF90044B1A4 /* libzmq.a */; };
+		8AE89F0719AF0B0B0099D11F /* ASDemos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AE89F0619AF0B0B0099D11F /* ASDemos.mm */; };
 		8AEA8E4319A0A78E0037DE52 /* ASPlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA8E4219A0A78E0037DE52 /* ASPlotView.m */; };
 		8AEA8E4519A0B8470037DE52 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AEA8E4419A0B8470037DE52 /* GLKit.framework */; };
 		8AEA8E5819A1F4680037DE52 /* ASElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA8E5719A1F4680037DE52 /* ASElement.m */; };
@@ -64,13 +62,6 @@
 			remoteGlobalIDString = 8AC3F4DB19A8A67F00B497F6;
 			remoteInfo = ASTransmit;
 		};
-		8AC3F51D19A8AB1E00B497F6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8AA3637F19A08B0A00CFF466 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8AC3F4DB19A8A67F00B497F6;
-			remoteInfo = ASTransmit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,15 +74,6 @@
 				8AC3F50719A8A7A400B497F6 /* libzmq.a in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AC3F51019A8A89300B497F6 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -147,11 +129,11 @@
 		8AC3F50019A8A6BC00B497F6 /* Plotter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plotter.cpp; sourceTree = "<group>"; };
 		8AC3F50119A8A6BC00B497F6 /* Plotter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Plotter.hpp; sourceTree = "<group>"; };
 		8AC3F50419A8A6EB00B497F6 /* Protocol.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Protocol.hpp; sourceTree = "<group>"; };
-		8AC3F51219A8A89300B497F6 /* AirScopeDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AirScopeDemo; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AC3F51419A8A89300B497F6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8AC3F51F19A8C7F100B497F6 /* ASMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASMessage.h; sourceTree = "<group>"; };
 		8AC3F52019A8C7F100B497F6 /* ASMessage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ASMessage.mm; sourceTree = "<group>"; };
 		8AD6397119A85BF90044B1A4 /* libzmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzmq.a; path = Libs/zeromq/lib/libzmq.a; sourceTree = "<group>"; };
+		8AE89F0519AF0B0B0099D11F /* ASDemos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASDemos.h; sourceTree = "<group>"; };
+		8AE89F0619AF0B0B0099D11F /* ASDemos.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ASDemos.mm; sourceTree = "<group>"; };
 		8AEA8E4119A0A78E0037DE52 /* ASPlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPlotView.h; sourceTree = "<group>"; };
 		8AEA8E4219A0A78E0037DE52 /* ASPlotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPlotView.m; sourceTree = "<group>"; };
 		8AEA8E4419A0B8470037DE52 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -185,15 +167,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AC3F4DD19A8A67F00B497F6 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AC3F50F19A8A89300B497F6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8AC3F51B19A8A8AA00B497F6 /* ASTransmit.framework in Frameworks */,
-				8AC3F51C19A8A9E300B497F6 /* libzmq.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +225,6 @@
 				8AA3639019A08B0B00CFF466 /* AirScope */,
 				8AA363AE19A08B0B00CFF466 /* AirScopeTests */,
 				8AC3F4DE19A8A67F00B497F6 /* ASTransmit */,
-				8AC3F51319A8A89300B497F6 /* AirScopeDemo */,
 				8AA3638919A08B0B00CFF466 /* Frameworks */,
 				8AA3638819A08B0B00CFF466 /* Products */,
 			);
@@ -264,7 +236,6 @@
 				8AA3638719A08B0B00CFF466 /* AirScope.app */,
 				8AA363A819A08B0B00CFF466 /* AirScopeTests.xctest */,
 				8AC3F4DC19A8A67F00B497F6 /* ASTransmit.framework */,
-				8AC3F51219A8A89300B497F6 /* AirScopeDemo */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -315,6 +286,8 @@
 				8AB2C5CA19A8155300385156 /* ASCommunicator.mm */,
 				8AC3F51F19A8C7F100B497F6 /* ASMessage.h */,
 				8AC3F52019A8C7F100B497F6 /* ASMessage.mm */,
+				8AE89F0519AF0B0B0099D11F /* ASDemos.h */,
+				8AE89F0619AF0B0B0099D11F /* ASDemos.mm */,
 			);
 			path = AirScope;
 			sourceTree = "<group>";
@@ -377,14 +350,6 @@
 				8AC3F4E419A8A67F00B497F6 /* ASTransmit-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8AC3F51319A8A89300B497F6 /* AirScopeDemo */ = {
-			isa = PBXGroup;
-			children = (
-				8AC3F51419A8A89300B497F6 /* main.cpp */,
-			);
-			path = AirScopeDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,24 +422,6 @@
 			productReference = 8AC3F4DC19A8A67F00B497F6 /* ASTransmit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8AC3F51119A8A89300B497F6 /* AirScopeDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8AC3F51819A8A89300B497F6 /* Build configuration list for PBXNativeTarget "AirScopeDemo" */;
-			buildPhases = (
-				8AC3F50E19A8A89300B497F6 /* Sources */,
-				8AC3F50F19A8A89300B497F6 /* Frameworks */,
-				8AC3F51019A8A89300B497F6 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8AC3F51E19A8AB1E00B497F6 /* PBXTargetDependency */,
-			);
-			name = AirScopeDemo;
-			productName = AirScopeDemo;
-			productReference = 8AC3F51219A8A89300B497F6 /* AirScopeDemo */;
-			productType = "com.apple.product-type.tool";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -506,7 +453,6 @@
 				8AA3638619A08B0B00CFF466 /* AirScope */,
 				8AA363A719A08B0B00CFF466 /* AirScopeTests */,
 				8AC3F4DB19A8A67F00B497F6 /* ASTransmit */,
-				8AC3F51119A8A89300B497F6 /* AirScopeDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -549,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AE89F0719AF0B0B0099D11F /* ASDemos.mm in Sources */,
 				8A87784C19A20028008EFA5D /* ASPlot.m in Sources */,
 				8A34941819AA9AC300A2EBDC /* ASBasicElement.m in Sources */,
 				8AA3639E19A08B0B00CFF466 /* ASAppDelegate.m in Sources */,
@@ -584,14 +531,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8AC3F50E19A8A89300B497F6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8AC3F51519A8A89300B497F6 /* main.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -604,11 +543,6 @@
 			isa = PBXTargetDependency;
 			target = 8AC3F4DB19A8A67F00B497F6 /* ASTransmit */;
 			targetProxy = 8AC3F50819A8A7B800B497F6 /* PBXContainerItemProxy */;
-		};
-		8AC3F51E19A8AB1E00B497F6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8AC3F4DB19A8A67F00B497F6 /* ASTransmit */;
-			targetProxy = 8AC3F51D19A8AB1E00B497F6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -870,42 +804,6 @@
 			};
 			name = Release;
 		};
-		8AC3F51919A8A89300B497F6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Libs/zeromq/lib",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		8AC3F51A19A8A89300B497F6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Libs/zeromq/lib",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -941,15 +839,6 @@
 			buildConfigurations = (
 				8AC3F4FB19A8A67F00B497F6 /* Debug */,
 				8AC3F4FC19A8A67F00B497F6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8AC3F51819A8A89300B497F6 /* Build configuration list for PBXNativeTarget "AirScopeDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8AC3F51919A8A89300B497F6 /* Debug */,
-				8AC3F51A19A8A89300B497F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

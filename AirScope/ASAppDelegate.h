@@ -12,6 +12,8 @@
 
 @interface ASAppDelegate : NSObject <NSApplicationDelegate>
 
+-(IBAction) launchDemos:(id)sender;
+
 @property (assign) IBOutlet NSWindow *window;
 @property (strong, readonly) ASMissionControl* missionControl;
 

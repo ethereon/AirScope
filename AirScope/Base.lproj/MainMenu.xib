@@ -120,6 +120,12 @@
                                     <action selector="print:" target="-1" id="qaZ-4w-aoO"/>
                                 </connections>
                             </menuItem>
+                            <menuItem isSeparatorItem="YES" id="jZf-Pr-8cJ"/>
+                            <menuItem title="Launch Demos..." keyEquivalent="N" id="eMF-bu-Vr5">
+                                <connections>
+                                    <action selector="launchDemos:" target="Voe-Tx-rLC" id="IFQ-l3-PnC"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>

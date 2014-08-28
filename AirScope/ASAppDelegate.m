@@ -9,6 +9,7 @@
 #import "ASAppDelegate.h"
 #import "ASMissionControl.h"
 #import "ASCommunicator.h"
+#import "ASDemos.h"
 
 @interface ASAppDelegate ()
 @property (strong) ASCommunicator* comm;
@@ -21,6 +22,11 @@
     _missionControl = [[ASMissionControl alloc] init];
     _comm = [[ASCommunicator alloc] init];
     [_comm start];
+}
+
+-(IBAction) launchDemos:(id)sender
+{
+    [ASDemos launchDemos];
 }
 
 @end
