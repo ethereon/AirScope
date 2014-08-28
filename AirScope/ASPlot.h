@@ -21,5 +21,6 @@
 @property (assign) float xRotation;
 @property (assign) float yRotation;
 @property (assign) float zRotation;
+@property (assign) float zoomFactor;
 
 @end

@@ -96,6 +96,8 @@ static NSString* const kGroundPlaneKey = @"__as-ground-plane";
     [self addPoint:p toElementOfClass:[ASPointCloud class] withKey:cloudKey];
 }
 
+#pragma mark - Event Handling
+
 -(void) keyDown:(NSEvent *)theEvent
 {
     int keyCode = [theEvent keyCode];
@@ -122,7 +124,23 @@ static NSString* const kGroundPlaneKey = @"__as-ground-plane";
     }
 }
 
+-(void)scrollWheel:(NSEvent *)theEvent
+{
+    float zoomScale = 1.1f;
+    if([theEvent scrollingDeltaY]<0)
+    {
+        zoomScale = 1.0f/zoomScale;
+    }
+    [self setZoomFactor:[_plot zoomFactor]*zoomScale];
+}
+
 #pragma mark - Plot Transformations
+
+-(void) setZoomFactor:(float)zoomFactor
+{
+    [_plot setZoomFactor:zoomFactor];
+    [_plotView setNeedsDisplay:YES];
+}
 
 -(void) toggleAutoRotate
 {
@@ -172,6 +190,7 @@ static NSString* const kGroundPlaneKey = @"__as-ground-plane";
     [self stopAutoRotation];
     [_plot setXRotation:0];
     [_plot setYRotation:0];
+    [_plot setZoomFactor:1];
     [_plotView setNeedsDisplay:YES];
 }
 

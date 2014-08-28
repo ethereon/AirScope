@@ -20,6 +20,7 @@
 {
     if(!(self=[super init])) return nil;
     _elements = [[NSMutableArray alloc] init];
+    _zoomFactor = 1.0f;
     return self;
 }
 
@@ -73,14 +74,15 @@
 
     //Setup orthographic projection.
     NSSize viewSize = [plotView bounds].size;
-    float dia       = sqrtf(3.0f);
+    float trueDia   = sqrtf(3.0f);
+    float dia       = trueDia*_zoomFactor;
     float radius    = dia*0.5f;
     float left      = -radius;
     float right     = radius;
     float bottom    = -radius;
     float top       = radius;
     float zNear     = 0.01f;
-    float zFar      = zNear + dia;
+    float zFar      = zNear + trueDia;
     float aspect    = viewSize.width/viewSize.height;
     if(aspect<1.0f)
     {
@@ -96,7 +98,7 @@
 
     //-zNear and -zFar are our clipping planes. (See documentation for glOrtho.)
     //Shift the model into the viewing volume.
-    MV = GLKMatrix4Multiply(GLKMatrix4MakeTranslation(0, 0, -radius-zNear), MV);
+    MV = GLKMatrix4Multiply(GLKMatrix4MakeTranslation(0, 0, -(trueDia*0.5)-zNear), MV);
 
     return GLKMatrix4Multiply(P, MV);
 }
