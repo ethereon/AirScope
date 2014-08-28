@@ -57,9 +57,13 @@ static void plot_sphere(float rho=1.0f, float inc=0.1)
 
 static void launch_demos()
 {
-    plot_helix();
-    plot_sphere();
-    plot_lorenz_attractor();
+    static NSString* const kDemoMutex = @"DemoSyncLock";
+    @synchronized(kDemoMutex)
+    {
+        plot_helix();
+        plot_sphere();
+        plot_lorenz_attractor();
+    }
 }
 
 +(void) launchDemos
