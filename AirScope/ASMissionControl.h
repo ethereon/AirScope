@@ -18,4 +18,6 @@
 
 -(ASPlotController*) plotControllerForKey:(NSString*)plotKey;
 
+-(void) removePlotController:(ASPlotController*)plotController;
+
 @end

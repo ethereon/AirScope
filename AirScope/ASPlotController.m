@@ -10,12 +10,13 @@
 #import "ASLine3D.h"
 #import "ASPlane.h"
 #import "ASPointCloud.h"
+#import "ASMissionControl.h"
 #import <Carbon/Carbon.h>
 
 static NSString* const kInternalElementPrefix = @"__as-";
 static NSString* const kGroundPlaneKey = @"__as-ground-plane";
 
-@interface ASPlotController ()
+@interface ASPlotController () <NSWindowDelegate>
 @property (strong) NSMutableDictionary* elements;
 @property (strong) NSTimer* rotationTimer;
 @end
@@ -39,6 +40,7 @@ static NSString* const kGroundPlaneKey = @"__as-ground-plane";
 - (void)windowDidLoad
 {
     [super windowDidLoad];
+    [[self window] setDelegate:self];
     [_plotView setPlot:_plot];
 }
 
@@ -94,6 +96,13 @@ static NSString* const kGroundPlaneKey = @"__as-ground-plane";
 -(void) addPoint:(GLKVector3)p toCloudWithKey:(NSString*)cloudKey
 {
     [self addPoint:p toElementOfClass:[ASPointCloud class] withKey:cloudKey];
+}
+
+#pragma mark - NSWindowDelegate Methods
+
+-(void) windowWillClose:(NSNotification *)notification
+{
+    [[ASMissionControl central] removePlotController:self];
 }
 
 #pragma mark - Event Handling
