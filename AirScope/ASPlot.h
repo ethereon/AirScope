@@ -21,6 +21,9 @@
 @property (assign) float xRotation;
 @property (assign) float yRotation;
 @property (assign) float zRotation;
-@property (assign) float zoomFactor;
+
+//The (x,y) components are interpreted as the zoom origin (in NDC).
+//The z component is interpreted as the zoom scaling factor.
+@property (assign) GLKVector3 zoom;
 
 @end

@@ -20,7 +20,7 @@
 {
     if(!(self=[super init])) return nil;
     _elements = [[NSMutableArray alloc] init];
-    _zoomFactor = 1.0f;
+    _zoom = GLKVector3Make(0.0f, 0.0f, 1.0f);
     return self;
 }
 
@@ -42,9 +42,9 @@
     GLKVector3 dataCenter = [_dataBounds center];
     N = GLKMatrix4MakeTranslation(-dataCenter.x, -dataCenter.y, -dataCenter.z);
     N = GLKMatrix4Multiply(GLKMatrix4MakeScale(1.0f/[_dataBounds spanX],
-                                                1.0f/[_dataBounds spanY],
-                                                1.0f/[_dataBounds spanZ]), N);
-
+                                               1.0f/[_dataBounds spanY],
+                                               1.0f/[_dataBounds spanZ]), N);
+    
     //Base Model-View-Projection.
     GLKMatrix4 T = [self transformForView:plotView];
     GLKMatrix4 TN = GLKMatrix4Multiply(T, N);
@@ -71,18 +71,17 @@
     GLKMatrix4 MV = GLKMatrix4MakeXRotation(_xRotation);
     MV = GLKMatrix4Multiply(GLKMatrix4MakeYRotation(_yRotation), MV);
     MV = GLKMatrix4Multiply(GLKMatrix4MakeZRotation(_zRotation), MV);
-
+    
     //Setup orthographic projection.
     NSSize viewSize = [plotView bounds].size;
-    float trueDia   = sqrtf(3.0f);
-    float dia       = trueDia*_zoomFactor;
+    float dia       = sqrtf(3.0f);
     float radius    = dia*0.5f;
     float left      = -radius;
     float right     = radius;
     float bottom    = -radius;
     float top       = radius;
     float zNear     = 0.01f;
-    float zFar      = zNear + trueDia;
+    float zFar      = zNear + dia;
     float aspect    = viewSize.width/viewSize.height;
     if(aspect<1.0f)
     {
@@ -95,11 +94,18 @@
         right   *= aspect;
     }
     GLKMatrix4 P = GLKMatrix4MakeOrtho(left, right, bottom, top, zNear, zFar);
-
+    
+    //Apply the zoom transformation.
+    //We apply this to the projection matrix so we don't have to worry about clipping issues.
+    GLKMatrix4 zoomT = GLKMatrix4MakeTranslation(-_zoom.x, -_zoom.y, 0.0f);
+    zoomT = GLKMatrix4Multiply(GLKMatrix4MakeScale(_zoom.z, _zoom.z, 0.0f), zoomT);
+    zoomT = GLKMatrix4Multiply(GLKMatrix4MakeTranslation(_zoom.x, _zoom.y, 0.0f), zoomT);
+    P = GLKMatrix4Multiply(zoomT, P);
+    
     //-zNear and -zFar are our clipping planes. (See documentation for glOrtho.)
     //Shift the model into the viewing volume.
-    MV = GLKMatrix4Multiply(GLKMatrix4MakeTranslation(0, 0, -(trueDia*0.5)-zNear), MV);
-
+    MV = GLKMatrix4Multiply(GLKMatrix4MakeTranslation(0, 0, -(dia*0.5)-zNear), MV);
+    
     return GLKMatrix4Multiply(P, MV);
 }
 

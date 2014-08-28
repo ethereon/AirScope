@@ -124,21 +124,38 @@ static NSString* const kGroundPlaneKey = @"__as-ground-plane";
     }
 }
 
+//Returns the point in the range [-1, 1].
+-(NSPoint) normalizeWindowLocation:(NSPoint)p
+{
+    NSSize winSize = [[self window] frame].size;
+    //Cocoa window locations start from 1 (rather than of 0).
+    //We start from the middle of the pixel instead.
+    return NSMakePoint(2*(p.x-0.5f)/winSize.width - 1.0f,
+                       2*(p.y-0.5f)/winSize.height - 1.0f);
+}
+
 -(void)scrollWheel:(NSEvent *)theEvent
 {
     float zoomScale = 1.1f;
-    if([theEvent scrollingDeltaY]<0)
+    if([theEvent scrollingDeltaY]>0)
     {
+        //Scroll-down is positive. We want to zoom-out our model.
         zoomScale = 1.0f/zoomScale;
     }
-    [self setZoomFactor:[_plot zoomFactor]*zoomScale];
+    [self setZoomFactor:[self zoomFactor]*zoomScale
+             withOrigin:[self normalizeWindowLocation:[theEvent locationInWindow]]];
 }
 
 #pragma mark - Plot Transformations
 
--(void) setZoomFactor:(float)zoomFactor
+-(float) zoomFactor
 {
-    [_plot setZoomFactor:zoomFactor];
+    return [_plot zoom].z;
+}
+
+-(void) setZoomFactor:(float)zoomFactor withOrigin:(NSPoint)origin
+{
+    [_plot setZoom:GLKVector3Make(origin.x, origin.y, zoomFactor)];
     [_plotView setNeedsDisplay:YES];
 }
 
@@ -190,7 +207,7 @@ static NSString* const kGroundPlaneKey = @"__as-ground-plane";
     [self stopAutoRotation];
     [_plot setXRotation:0];
     [_plot setYRotation:0];
-    [_plot setZoomFactor:1];
+    [_plot setZoom:GLKVector3Make(0.0f, 0.0f, 1.0f)];
     [_plotView setNeedsDisplay:YES];
 }
 
