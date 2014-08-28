@@ -23,18 +23,15 @@
     return self;
 }
 
--(void) addElement:(ASElement*)elem scaleToFit:(BOOL)rescale
-{
-    [_elements addObject:elem];
-    if(rescale)
-    {
-        [self scaleToFit];
-    }
-}
-
 -(void) addElement:(ASElement*)elem
 {
-    [self addElement:elem scaleToFit:YES];
+    [_elements addObject:elem];
+}
+
+-(void) removeElement:(ASElement*)elem
+{
+    assert([_elements containsObject:elem]);
+    [_elements removeObject:elem];
 }
 
 -(void) renderInView:(ASPlotView*)plotView

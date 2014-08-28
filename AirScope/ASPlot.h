@@ -14,7 +14,7 @@
 @interface ASPlot : NSObject
 
 -(void) addElement:(ASElement*)elem;
--(void) addElement:(ASElement*)elem scaleToFit:(BOOL)rescale;
+-(void) removeElement:(ASElement*)elem;
 -(void) renderInView:(ASPlotView*)plotView;
 -(void) scaleToFit;
 

@@ -54,7 +54,7 @@ void plot_sphere(float rho=1.0f, float inc=0.1)
 
 int main(int argc, const char * argv[])
 {
-    plot_sphere();
+    plot_lorenz_attractor();
     return 0;
 }
 

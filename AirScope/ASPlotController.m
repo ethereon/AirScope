@@ -12,6 +12,7 @@
 #import "ASPointCloud.h"
 #import <Carbon/Carbon.h>
 
+static NSString* const kInternalElementPrefix = @"__as-";
 static NSString* const kGroundPlaneKey = @"__as-ground-plane";
 
 @interface ASPlotController ()
@@ -48,6 +49,17 @@ static NSString* const kGroundPlaneKey = @"__as-ground-plane";
 
 -(void) reset
 {
+    NSArray* elemKeys = [_elements allKeys];
+    for(id key in elemKeys)
+    {
+        if(![key hasPrefix:kInternalElementPrefix])
+        {
+            ASElement* elem = _elements[key];
+            [_elements removeObjectForKey:key];
+            [_plot removeElement:elem];
+        }
+    }
+    [_plotView setNeedsDisplay:YES];
 }
 
 -(void) update
