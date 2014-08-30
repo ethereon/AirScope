@@ -29,7 +29,8 @@ namespace as
     {
         NewPlot,
         AddPointToLine,
-        AddPointToCloud
+        AddPointToCloud,
+        DeleteElement
     };
 
     namespace op
@@ -48,6 +49,12 @@ namespace as
             float y;
             float z;
             AS_SERIALIZE(elementKey, x, y, z);
+        };
+        
+        struct DeleteElement
+        {
+            std::string elementKey;
+            AS_SERIALIZE(elementKey);
         };
     }
 }

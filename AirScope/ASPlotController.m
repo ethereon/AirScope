@@ -56,9 +56,7 @@ static NSString* const kGroundPlaneKey = @"__as-ground-plane";
     {
         if(![key hasPrefix:kInternalElementPrefix])
         {
-            ASElement* elem = _elements[key];
-            [_elements removeObjectForKey:key];
-            [_plot removeElement:elem];
+            [self deleteElementWithKey:key];
         }
     }
     [_plotView setNeedsDisplay:YES];
@@ -96,6 +94,13 @@ static NSString* const kGroundPlaneKey = @"__as-ground-plane";
 -(void) addPoint:(GLKVector3)p toCloudWithKey:(NSString*)cloudKey
 {
     [self addPoint:p toElementOfClass:[ASPointCloud class] withKey:cloudKey];
+}
+
+-(void) deleteElementWithKey:(NSString*)elemKey
+{
+    ASElement* elem = _elements[elemKey];
+    [_plot removeElement:elem];
+    [_elements removeObjectForKey:elemKey];
 }
 
 #pragma mark - NSWindowDelegate Methods

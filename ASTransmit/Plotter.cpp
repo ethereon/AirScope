@@ -91,6 +91,13 @@ void Plotter::plot(float x, float y, float z)
     this->plotLine(x, y, z, kDefaultLineKey);
 }
 
+void Plotter::deleteElement(const std::string& elemKey)
+{
+    op::DeleteElement cmd;
+    cmd.elementKey = elemKey;
+    this->transmitCommand(OpCode::DeleteElement, cmd);
+}
+
 template <typename OP> void Plotter::transmitPointOp(float x, float y, float z, const std::string& elemKey, OP opCode)
 {
     op::PointOp cmd;

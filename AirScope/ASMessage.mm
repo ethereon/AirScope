@@ -8,6 +8,7 @@
 
 #import "ASMessage.h"
 #import <sstream>
+#import "ASMissionControl.h"
 
 @implementation ASMessage
 {
@@ -44,6 +45,11 @@
 -(MsgArchive&) archive
 {
     return *_archive;
+}
+
+-(ASPlotController*) plotController
+{
+    return [[ASMissionControl central] plotControllerForKey:[self plotKey] autoCreate:YES];
 }
 
 @end

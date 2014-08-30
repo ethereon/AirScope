@@ -86,6 +86,9 @@ using namespace as;
         case OpCode::AddPointToLine:
             [self handleAddPointMessage:msg forOperation:operation];
             break;
+        case OpCode::DeleteElement:
+            [self handleDeleteElementMessage:msg];
+            break;
         default:
             NSLog(@"Received unknown operation code: %d", (int)operation);
     }
@@ -109,7 +112,7 @@ using namespace as;
 {
     dispatch_async(dispatch_get_main_queue(),
                    ^{
-                       ASPlotController* plotController = [[ASMissionControl central] plotControllerForKey:[msg plotKey] autoCreate:YES];
+                       ASPlotController* plotController = [msg plotController];
                        op::PointOp cmd;
                        [msg archive](cmd);
                        GLKVector3 pt = GLKVector3Make(cmd.x, cmd.y, cmd.z);
@@ -130,7 +133,16 @@ using namespace as;
                    });
 }
 
-
+-(void) handleDeleteElementMessage:(ASMessage*)msg
+{
+    dispatch_async(dispatch_get_main_queue(),
+                   ^{
+                       op::DeleteElement cmd;
+                       [msg archive](cmd);
+                       [[msg plotController] deleteElementWithKey:NSStringFromString(cmd.elementKey)];
+                       [[msg plotController] update];
+                   });
+}
 
 #pragma mark - Utility
 

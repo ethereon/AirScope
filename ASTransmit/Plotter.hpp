@@ -29,6 +29,8 @@ namespace as
         void plot(float x, float y, float z);
         void plotLine(float x, float y, float z, const std::string& lineKey=AS_AUTO_DETECT);
         void plotPoint(float x, float y, float z, const std::string& cloudKey=AS_AUTO_DETECT);
+        
+        void deleteElement(const std::string& elemKey);
 
     private:
 

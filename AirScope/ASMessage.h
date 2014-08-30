@@ -14,6 +14,8 @@
 
 typedef cereal::BinaryInputArchive MsgArchive;
 
+@class ASPlotController;
+
 @interface ASMessage : NSObject
 
 +(ASMessage*) messageFromData:(void*)msgData ofLength:(size_t)msgLen;
@@ -21,6 +23,8 @@ typedef cereal::BinaryInputArchive MsgArchive;
 -(as::OpCode) opCode;
 
 -(MsgArchive&) archive;
+
+-(ASPlotController*) plotController;
 
 @property (strong) NSString* plotKey;
 
