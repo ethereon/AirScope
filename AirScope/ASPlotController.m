@@ -150,14 +150,24 @@ static NSString* const kGroundPlaneKey = @"__as-ground-plane";
 
 -(void)scrollWheel:(NSEvent *)theEvent
 {
-    float zoomScale = 1.1f;
-    if([theEvent scrollingDeltaY]>0)
+    float delta = [theEvent scrollingDeltaY];
+    if(delta==0)
     {
-        //Scroll-down is positive. We want to zoom-out our model.
-        zoomScale = 1.0f/zoomScale;
+        return;
     }
-    [self setZoomFactor:[self zoomFactor]*zoomScale
-             withOrigin:[self normalizeWindowLocation:[theEvent locationInWindow]]];
+    //Negate as scroll-axis is inverted.
+    float zoomIncrement = -0.05f*delta;
+    float newZoomFactor = [self zoomFactor]+zoomIncrement;
+    if(newZoomFactor>=1.0f)
+    {
+        [self setZoomFactor:newZoomFactor
+                 withOrigin:[self normalizeWindowLocation:[theEvent locationInWindow]]];
+    }
+    else
+    {
+        //Snap to perfect 1.0 scale.
+        [self setZoomFactor:1.0 withOrigin:NSZeroPoint];
+    }
 }
 
 #pragma mark - Plot Transformations
