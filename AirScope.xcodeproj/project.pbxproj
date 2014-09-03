@@ -16,7 +16,6 @@
 		8AA3638B19A08B0B00CFF466 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA3638A19A08B0B00CFF466 /* Cocoa.framework */; };
 		8AA3639519A08B0B00CFF466 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3639319A08B0B00CFF466 /* InfoPlist.strings */; };
 		8AA3639719A08B0B00CFF466 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3639619A08B0B00CFF466 /* main.m */; };
-		8AA3639B19A08B0B00CFF466 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3639919A08B0B00CFF466 /* Credits.rtf */; };
 		8AA3639E19A08B0B00CFF466 /* ASAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3639D19A08B0B00CFF466 /* ASAppDelegate.m */; };
 		8AA363A319A08B0B00CFF466 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA363A219A08B0B00CFF466 /* Images.xcassets */; };
 		8AA363AA19A08B0B00CFF466 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA363A919A08B0B00CFF466 /* XCTest.framework */; };
@@ -99,7 +98,6 @@
 		8AA3639419A08B0B00CFF466 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8AA3639619A08B0B00CFF466 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8AA3639819A08B0B00CFF466 /* AirScope-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirScope-Prefix.pch"; sourceTree = "<group>"; };
-		8AA3639A19A08B0B00CFF466 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		8AA3639C19A08B0B00CFF466 /* ASAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASAppDelegate.h; sourceTree = "<group>"; };
 		8AA3639D19A08B0B00CFF466 /* ASAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASAppDelegate.m; sourceTree = "<group>"; };
 		8AA363A019A08B0B00CFF466 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -299,7 +297,6 @@
 				8AA3639319A08B0B00CFF466 /* InfoPlist.strings */,
 				8AA3639619A08B0B00CFF466 /* main.m */,
 				8AA3639819A08B0B00CFF466 /* AirScope-Prefix.pch */,
-				8AA3639919A08B0B00CFF466 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -466,7 +463,6 @@
 				8AA3639519A08B0B00CFF466 /* InfoPlist.strings in Resources */,
 				8AA363D619A09B9C00CFF466 /* BasicElement.fsh in Resources */,
 				8AA363A319A08B0B00CFF466 /* Images.xcassets in Resources */,
-				8AA3639B19A08B0B00CFF466 /* Credits.rtf in Resources */,
 				8AA363D419A09B8400CFF466 /* BasicElement.vsh in Resources */,
 				8AC3F50C19A8A81300B497F6 /* MainMenu.xib in Resources */,
 			);
@@ -553,14 +549,6 @@
 				8AA3639419A08B0B00CFF466 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8AA3639919A08B0B00CFF466 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8AA3639A19A08B0B00CFF466 /* en */,
-			);
-			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 		8AA3639F19A08B0B00CFF466 /* MainMenu.xib */ = {
