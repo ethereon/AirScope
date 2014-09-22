@@ -23,16 +23,18 @@ template <typename Archive> \
 void serialize(Archive& archive) \
 { archive(__VA_ARGS__); }
 
+#define AS_ELEM_SERIALIZE(...) AS_SERIALIZE(elementKey, __VA_ARGS__)
+
 namespace as
 {
-    enum class OpCode : char
+    enum class OpCode : int
     {
         NewPlot,
         AddPointToLine,
         AddPointToCloud,
         DeleteElement
     };
-
+    
     namespace op
     {
         struct NewPlot
@@ -41,20 +43,20 @@ namespace as
             bool resetExistingPlot;
             AS_SERIALIZE(title, resetExistingPlot);
         };
-
-        struct PointOp
-        {
+        
+        struct ElementCommand
+        {            
             std::string elementKey;
+            
+            AS_SERIALIZE(elementKey);
+        };
+        
+        struct PointCommand : ElementCommand
+        {
             float x;
             float y;
             float z;
-            AS_SERIALIZE(elementKey, x, y, z);
-        };
-        
-        struct DeleteElement
-        {
-            std::string elementKey;
-            AS_SERIALIZE(elementKey);
+            AS_ELEM_SERIALIZE(x, y, z);
         };
     }
 }

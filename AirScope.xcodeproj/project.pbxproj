@@ -10,6 +10,16 @@
 		8A34941819AA9AC300A2EBDC /* ASBasicElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A34941719AA9AC300A2EBDC /* ASBasicElement.m */; };
 		8A34941F19AAA67500A2EBDC /* ASPointCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A34941E19AAA67500A2EBDC /* ASPointCloud.m */; };
 		8A34942519AACBA600A2EBDC /* ASPointsElement.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A34942419AACBA600A2EBDC /* ASPointsElement.mm */; };
+		8A668C5A19CD15D80020FA7B /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A668C5819CD15D80020FA7B /* Element.cpp */; };
+		8A668C5B19CD15D80020FA7B /* Element.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8A668C5919CD15D80020FA7B /* Element.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A668C6719CD1D770020FA7B /* Transmitter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8A668C6519CD1D770020FA7B /* Transmitter.hpp */; };
+		8A668C6A19CD28EA0020FA7B /* SocketTransmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A668C6819CD28EA0020FA7B /* SocketTransmitter.cpp */; };
+		8A668C6B19CD28EA0020FA7B /* SocketTransmitter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8A668C6919CD28EA0020FA7B /* SocketTransmitter.hpp */; };
+		8A668C7219CD42F30020FA7B /* Line.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A668C7019CD42F30020FA7B /* Line.cpp */; };
+		8A668C7319CD42F30020FA7B /* Line.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8A668C7119CD42F30020FA7B /* Line.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A668C7619CD45070020FA7B /* PointCloud.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A668C7419CD45070020FA7B /* PointCloud.cpp */; };
+		8A668C7719CD45070020FA7B /* PointCloud.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8A668C7519CD45070020FA7B /* PointCloud.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A668C8119CD4F450020FA7B /* ASTransmit.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8A668C8019CD4F1B0020FA7B /* ASTransmit.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A87784919A1F99D008EFA5D /* ASBounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A87784819A1F99D008EFA5D /* ASBounds.m */; };
 		8A87784C19A20028008EFA5D /* ASPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A87784B19A20028008EFA5D /* ASPlot.m */; };
 		8A87785F19A74301008EFA5D /* ASPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A87785E19A74301008EFA5D /* ASPlane.m */; };
@@ -32,8 +42,8 @@
 		8AB2C5CE19A815A200385156 /* ASMissionControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2C5CD19A815A200385156 /* ASMissionControl.m */; };
 		8AC3F4DD19A8A67F00B497F6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA3638A19A08B0B00CFF466 /* Cocoa.framework */; };
 		8AC3F4E319A8A67F00B497F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AC3F4E119A8A67F00B497F6 /* InfoPlist.strings */; };
-		8AC3F50219A8A6BC00B497F6 /* Plotter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8AC3F50019A8A6BC00B497F6 /* Plotter.cpp */; };
-		8AC3F50319A8A6BC00B497F6 /* Plotter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8AC3F50119A8A6BC00B497F6 /* Plotter.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AC3F50219A8A6BC00B497F6 /* Plot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8AC3F50019A8A6BC00B497F6 /* Plot.cpp */; };
+		8AC3F50319A8A6BC00B497F6 /* Plot.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8AC3F50119A8A6BC00B497F6 /* Plot.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AC3F50719A8A7A400B497F6 /* libzmq.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AD6397119A85BF90044B1A4 /* libzmq.a */; };
 		8AC3F50B19A8A7FE00B497F6 /* Protocol.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8AC3F50419A8A6EB00B497F6 /* Protocol.hpp */; };
 		8AC3F50C19A8A81300B497F6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3639F19A08B0B00CFF466 /* MainMenu.xib */; };
@@ -83,6 +93,18 @@
 		8A34941E19AAA67500A2EBDC /* ASPointCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPointCloud.m; sourceTree = "<group>"; };
 		8A34942319AACBA600A2EBDC /* ASPointsElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPointsElement.h; sourceTree = "<group>"; };
 		8A34942419AACBA600A2EBDC /* ASPointsElement.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ASPointsElement.mm; sourceTree = "<group>"; };
+		8A668C5819CD15D80020FA7B /* Element.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Element.cpp; sourceTree = "<group>"; };
+		8A668C5919CD15D80020FA7B /* Element.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Element.hpp; sourceTree = "<group>"; };
+		8A668C6519CD1D770020FA7B /* Transmitter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Transmitter.hpp; sourceTree = "<group>"; };
+		8A668C6819CD28EA0020FA7B /* SocketTransmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketTransmitter.cpp; sourceTree = "<group>"; };
+		8A668C6919CD28EA0020FA7B /* SocketTransmitter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SocketTransmitter.hpp; sourceTree = "<group>"; };
+		8A668C7019CD42F30020FA7B /* Line.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Line.cpp; sourceTree = "<group>"; };
+		8A668C7119CD42F30020FA7B /* Line.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Line.hpp; sourceTree = "<group>"; };
+		8A668C7419CD45070020FA7B /* PointCloud.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointCloud.cpp; sourceTree = "<group>"; };
+		8A668C7519CD45070020FA7B /* PointCloud.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PointCloud.hpp; sourceTree = "<group>"; };
+		8A668C8019CD4F1B0020FA7B /* ASTransmit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ASTransmit.hpp; sourceTree = "<group>"; };
+		8A668C8219CD50D20020FA7B /* QuickPlot.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuickPlot.hpp; sourceTree = "<group>"; };
+		8A668C8319D096380020FA7B /* Command.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Command.hpp; sourceTree = "<group>"; };
 		8A87784719A1F99D008EFA5D /* ASBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASBounds.h; sourceTree = "<group>"; };
 		8A87784819A1F99D008EFA5D /* ASBounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASBounds.m; sourceTree = "<group>"; };
 		8A87784A19A20028008EFA5D /* ASPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPlot.h; sourceTree = "<group>"; };
@@ -124,8 +146,8 @@
 		8AC3F4E019A8A67F00B497F6 /* ASTransmit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ASTransmit-Info.plist"; sourceTree = "<group>"; };
 		8AC3F4E219A8A67F00B497F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8AC3F4E419A8A67F00B497F6 /* ASTransmit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ASTransmit-Prefix.pch"; sourceTree = "<group>"; };
-		8AC3F50019A8A6BC00B497F6 /* Plotter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plotter.cpp; sourceTree = "<group>"; };
-		8AC3F50119A8A6BC00B497F6 /* Plotter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Plotter.hpp; sourceTree = "<group>"; };
+		8AC3F50019A8A6BC00B497F6 /* Plot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plot.cpp; sourceTree = "<group>"; };
+		8AC3F50119A8A6BC00B497F6 /* Plot.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Plot.hpp; sourceTree = "<group>"; };
 		8AC3F50419A8A6EB00B497F6 /* Protocol.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Protocol.hpp; sourceTree = "<group>"; };
 		8AC3F51F19A8C7F100B497F6 /* ASMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASMessage.h; sourceTree = "<group>"; };
 		8AC3F52019A8C7F100B497F6 /* ASMessage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ASMessage.mm; sourceTree = "<group>"; };
@@ -331,10 +353,22 @@
 		8AC3F4DE19A8A67F00B497F6 /* ASTransmit */ = {
 			isa = PBXGroup;
 			children = (
-				8AC3F50419A8A6EB00B497F6 /* Protocol.hpp */,
-				8AC3F50019A8A6BC00B497F6 /* Plotter.cpp */,
-				8AC3F50119A8A6BC00B497F6 /* Plotter.hpp */,
 				8AC3F4DF19A8A67F00B497F6 /* Supporting Files */,
+				8AC3F50419A8A6EB00B497F6 /* Protocol.hpp */,
+				8AC3F50019A8A6BC00B497F6 /* Plot.cpp */,
+				8AC3F50119A8A6BC00B497F6 /* Plot.hpp */,
+				8A668C5819CD15D80020FA7B /* Element.cpp */,
+				8A668C5919CD15D80020FA7B /* Element.hpp */,
+				8A668C6519CD1D770020FA7B /* Transmitter.hpp */,
+				8A668C6819CD28EA0020FA7B /* SocketTransmitter.cpp */,
+				8A668C6919CD28EA0020FA7B /* SocketTransmitter.hpp */,
+				8A668C7019CD42F30020FA7B /* Line.cpp */,
+				8A668C7119CD42F30020FA7B /* Line.hpp */,
+				8A668C7419CD45070020FA7B /* PointCloud.cpp */,
+				8A668C7519CD45070020FA7B /* PointCloud.hpp */,
+				8A668C8019CD4F1B0020FA7B /* ASTransmit.hpp */,
+				8A668C8219CD50D20020FA7B /* QuickPlot.hpp */,
+				8A668C8319D096380020FA7B /* Command.hpp */,
 			);
 			path = ASTransmit;
 			sourceTree = "<group>";
@@ -356,8 +390,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AC3F50319A8A6BC00B497F6 /* Plotter.hpp in Headers */,
+				8A668C7319CD42F30020FA7B /* Line.hpp in Headers */,
+				8A668C5B19CD15D80020FA7B /* Element.hpp in Headers */,
+				8A668C8119CD4F450020FA7B /* ASTransmit.hpp in Headers */,
+				8AC3F50319A8A6BC00B497F6 /* Plot.hpp in Headers */,
+				8A668C6B19CD28EA0020FA7B /* SocketTransmitter.hpp in Headers */,
+				8A668C6719CD1D770020FA7B /* Transmitter.hpp in Headers */,
 				8AC3F50B19A8A7FE00B497F6 /* Protocol.hpp in Headers */,
+				8A668C7719CD45070020FA7B /* PointCloud.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,7 +563,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AC3F50219A8A6BC00B497F6 /* Plotter.cpp in Sources */,
+				8A668C6A19CD28EA0020FA7B /* SocketTransmitter.cpp in Sources */,
+				8A668C7219CD42F30020FA7B /* Line.cpp in Sources */,
+				8A668C7619CD45070020FA7B /* PointCloud.cpp in Sources */,
+				8A668C5A19CD15D80020FA7B /* Element.cpp in Sources */,
+				8AC3F50219A8A6BC00B497F6 /* Plot.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -113,7 +113,7 @@ using namespace as;
     dispatch_async(dispatch_get_main_queue(),
                    ^{
                        ASPlotController* plotController = [msg plotController];
-                       op::PointOp cmd;
+                       op::PointCommand cmd;
                        [msg archive](cmd);
                        GLKVector3 pt = GLKVector3Make(cmd.x, cmd.y, cmd.z);
                        NSString* elemKey = NSStringFromString(cmd.elementKey);
@@ -137,7 +137,7 @@ using namespace as;
 {
     dispatch_async(dispatch_get_main_queue(),
                    ^{
-                       op::DeleteElement cmd;
+                       op::ElementCommand cmd;
                        [msg archive](cmd);
                        [[msg plotController] deleteElementWithKey:NSStringFromString(cmd.elementKey)];
                        [[msg plotController] update];
