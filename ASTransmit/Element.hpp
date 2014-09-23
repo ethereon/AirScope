@@ -10,7 +10,6 @@
 #define __AirScope__Element__
 
 #include <string>
-#include "Transmitter.hpp"
 
 namespace as
 {

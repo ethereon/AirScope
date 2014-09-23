@@ -11,7 +11,6 @@
 
 #include <string>
 #include <vector>
-#include "Transmitter.hpp"
 
 #define AS_AUTO_DETECT  ""
 
@@ -19,6 +18,7 @@ namespace as
 {
     class Element;
     class AbstractCommand;
+    class Transmitter;
     
     class Plot
     {

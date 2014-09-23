@@ -20,6 +20,7 @@
 		8A668C7619CD45070020FA7B /* PointCloud.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A668C7419CD45070020FA7B /* PointCloud.cpp */; };
 		8A668C7719CD45070020FA7B /* PointCloud.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8A668C7519CD45070020FA7B /* PointCloud.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A668C8119CD4F450020FA7B /* ASTransmit.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8A668C8019CD4F1B0020FA7B /* ASTransmit.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A668C8419D0FB3A0020FA7B /* QuickPlot.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8A668C8219CD50D20020FA7B /* QuickPlot.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A87784919A1F99D008EFA5D /* ASBounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A87784819A1F99D008EFA5D /* ASBounds.m */; };
 		8A87784C19A20028008EFA5D /* ASPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A87784B19A20028008EFA5D /* ASPlot.m */; };
 		8A87785F19A74301008EFA5D /* ASPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A87785E19A74301008EFA5D /* ASPlane.m */; };
@@ -392,6 +393,7 @@
 			files = (
 				8A668C7319CD42F30020FA7B /* Line.hpp in Headers */,
 				8A668C5B19CD15D80020FA7B /* Element.hpp in Headers */,
+				8A668C8419D0FB3A0020FA7B /* QuickPlot.hpp in Headers */,
 				8A668C8119CD4F450020FA7B /* ASTransmit.hpp in Headers */,
 				8AC3F50319A8A6BC00B497F6 /* Plot.hpp in Headers */,
 				8A668C6B19CD28EA0020FA7B /* SocketTransmitter.hpp in Headers */,
